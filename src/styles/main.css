@@ -17,20 +17,19 @@ main {
   flex: 1;
 }
 
-/* navbar */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Centers items vertically */
   background-color: #006769;
   color: white;
-  padding: 10px 20px;
+  padding-top: 20px;
 }
 
 .brand {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Centers brand vertically */
 }
 
 .brand h1 {
@@ -41,6 +40,7 @@ main {
 .nav-menu {
   display: flex;
   list-style: none;
+  align-items: center; /* Centers nav items vertically */
 }
 
 .nav-menu li {
@@ -62,8 +62,20 @@ main {
 
 /* Footer Section */
 .footer {
-  background-color: #006769;
+  background-color: #006666;
   color: white;
-  text-align: center;
-  padding: 20px 0;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }
