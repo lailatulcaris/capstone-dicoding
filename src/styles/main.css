@@ -1,4 +1,8 @@
 /* Global Styles */
+*{
+  border: 1px red solid;
+}
+
 html,
 body {
   height: 100%;
@@ -15,6 +19,32 @@ body {
 /* Wrapper untuk konten utama */
 main {
   flex: 1;
+}
+
+a {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+#hero{
+  background: url('../public/images/heros/hero-image_2.jpg');
+  padding: 20px 0;
+  color: white;
+  text-shadow: #000 2px 2px 2px;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+#hero-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 /* Navbar */
