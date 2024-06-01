@@ -8,6 +8,7 @@
 import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
+import App from './views/app';
 
 const menu_hamburger = document.querySelector('#menu_hamburger');
 const hero = document.querySelector('.hero');
@@ -26,3 +27,11 @@ hero.addEventListener('click', function () {
 main.addEventListener('click', function () {
     navigation_drawer.classList.remove('open');
 });
+
+window.addEventListener('hashchange', () => {
+    app.renderPage();
+  });
+   
+  window.addEventListener('load', () => {
+    app.renderPage();
+  });
