@@ -1,7 +1,6 @@
-/* Global Styles */
-/* * {
-   border: 1px red solid; 
-} */
+* {
+  /* border: 1px red solid; */
+}
 
 html,
 body {
@@ -55,6 +54,24 @@ a {
   background-color: #006769;
   color: white;
   padding-top: 20px;
+  box-shadow: 0 10px 15px rgba(26, 185, 185, 0.2);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px; /* Sesuaikan ukuran gambar logo */
+  height: auto; /* Sesuaikan ukuran gambar logo */
+  margin-right: 10px; /* Beri jarak antara gambar dan teks */
+  box-shadow: 0 5px 5px rgba(255, 255, 255, 0.2);
+  opacity: 0.9;
+}
+
+.h3 {
+  margin: 0; /* Hilangkan margin default dari elemen h1 */
 }
 
 .brand {
@@ -94,6 +111,7 @@ a {
 .footer {
   background-color: #006666;
   color: white;
+  box-shadow: 0 0 15px rgba(26, 185, 185, 0.4); /* Mengubah nilai offset y menjadi 0 */
 }
 
 .logo-img {
@@ -108,4 +126,8 @@ a {
 
 .links a:hover {
   text-decoration: underline;
+}
+
+.github-icon {
+  font-size: 30px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
 }
