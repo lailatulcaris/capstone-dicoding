@@ -1,7 +1,7 @@
 /* Global Styles */
-*{
-  border: 1px red solid;
-}
+/* * {
+   border: 1px red solid; 
+} */
 
 html,
 body {
@@ -27,8 +27,8 @@ a {
   min-height: 44px;
 }
 
-#hero{
-  background: url('../public/images/heros/hero-image_2.jpg');
+#hero {
+  background: url("../public/images/heros/hero-image_2.jpg");
   padding: 20px 0;
   color: white;
   text-shadow: #000 2px 2px 2px;
@@ -36,7 +36,7 @@ a {
   font-size: 2em;
 }
 
-#hero-btn{
+#hero-btn {
   display: inline-block;
   padding: 10px 20px;
   background: transparent;
