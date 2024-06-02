@@ -131,3 +131,40 @@ a {
 .github-icon {
   font-size: 30px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
 }
+
+/* card */
+#culture-list {
+  text-align: center;
+}
+
+#culture-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.culture-card {
+  flex: 0 0 calc(20% - 15px); /* Menyesuaikan lebar kolom untuk 5 kolom */
+}
+
+.culture-card .card {
+  height: 100%; /* Pastikan setiap kartu memiliki tinggi yang sama */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.culture-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.culture-card .card-title {
+  font-size: 1.25rem;
+}
+
+.culture-card .card-text {
+  font-size: 1rem;
+}
