@@ -89,9 +89,10 @@ const Budaya = {
 
     cultures.forEach((culture) => {
       const cultureElement = document.createElement("div");
-      cultureElement.classList.add("col-md-2", "culture-card");
+      cultureElement.classList.add("col-md-4", "culture-card");
       cultureElement.innerHTML = `
         <div class="card mb-4 shadow-sm">
+          <img src="../${culture.name.toLowerCase().replace(/ /g, "-")}.jpg" class="card-img-top" alt="${culture.name}">
           <div class="card-body">
             <h5 class="card-title">${culture.name}</h5>
             <p class="card-text">${culture.description}</p>
