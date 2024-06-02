@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel in</title>
     <link rel="icon" href="./logo.jpg" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
@@ -42,10 +42,7 @@
       </nav>
     </header>
 
-    <main class="container mt-4" id="main-content">
-
-    </main>
-
+    <main class="container mt-4" id="main-content"></main>
 
     <footer class="footer bg-teal py-3">
       <div class="container d-flex justify-content-between align-items-center">
@@ -62,5 +59,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module">
+      import { Beranda } from "./Beranda.js";
+      import Budaya from "./Budaya.js";
+
+      const routes = {
+        "/beranda": Beranda,
+        "/budaya": Budaya,
+        // Tambahkan rute lainnya di sini jika diperlukan
+      };
+
+      const renderPage = async () => {
+        const path = window.location.hash.substr(2) || "/beranda";
+        const page = routes[path] || Beranda;
+        const mainContent = document.getElementById("main-content");
+        mainContent.innerHTML = await page.render();
+        await page.afterRender();
+      };
+
+      window.addEventListener("hashchange", renderPage);
+      window.addEventListener("DOMContentLoaded", renderPage);
+    </script>
   </body>
 </html>
