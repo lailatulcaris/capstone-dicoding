@@ -1,108 +1,49 @@
 const Budaya = {
   async render() {
     return `
-      <h2>Budaya</h2>
-      </div>
-      <div id="culture-list" class="mt-5">
-        <div class="row" id="culture-items">
-          <!-- Cultural items will be inserted here -->
+      <div class="container mt-5">
+        <div class="section-title">
+          <center><h2>Budaya</h2></center>
+        </div>
+        <div class="row mt-4" id="culture-cards">
+          <!-- Culture cards will be inserted here by JavaScript -->
         </div>
       </div>
     `;
   },
 
   async afterRender() {
-    const cultures = [
-      {
-        id: 1,
-        name: "Barong Dance",
-        description: "Barong Dance is a traditional Balinese dance depicting the battle between good (Barong) and evil (Rangda).",
-        province: "Bali",
-        address: "Batubulan Village, Gianyar, Bali",
-      },
-      {
-        id: 2,
-        name: "Saman Dance",
-        description: "Saman Dance is a traditional Acehnese dance performed in groups with synchronized hand and body movements.",
-        province: "Aceh",
-        address: "Gayo Lues, Aceh",
-      },
-      {
-        id: 3,
-        name: "Karapan Sapi",
-        description: "Karapan Sapi is a traditional bull racing competition from Madura, East Java.",
-        province: "East Java",
-        address: "Madura Island, East Java",
-      },
-      {
-        id: 4,
-        name: "Reog Ponorogo",
-        description: "Reog Ponorogo is a traditional performance art from Ponorogo, East Java, featuring large masks and lion dance.",
-        province: "East Java",
-        address: "Ponorogo, East Java",
-      },
-      {
-        id: 5,
-        name: "Nadran Ceremony",
-        description: "Nadran Ceremony is a sea ritual performed by fishermen in West Java as a form of gratitude for the sea's bounty.",
-        province: "West Java",
-        address: "Indramayu, West Java",
-      },
-      {
-        id: 6,
-        name: "Ondel-ondel",
-        description: "Ondel-ondel is a traditional Betawi performance featuring giant puppets and is an icon of Jakarta's culture.",
-        province: "Jakarta",
-        address: "Betawi Village, Jakarta",
-      },
-      {
-        id: 7,
-        name: "Ruwatan",
-        description: "Ruwatan is a traditional Javanese ceremony aimed at cleansing oneself from bad luck and evil spirits.",
-        province: "Central Java",
-        address: "Surakarta, Central Java",
-      },
-      {
-        id: 8,
-        name: "Pakarena Dance",
-        description: "Pakarena Dance is a traditional dance from South Sulawesi depicting the grace and politeness of Bugis women.",
-        province: "South Sulawesi",
-        address: "Gowa, South Sulawesi",
-      },
-      {
-        id: 9,
-        name: "Ararem",
-        description: "Ararem is a tradition of delivering dowries in the culture of West Papua with traditional dances and music.",
-        province: "West Papua",
-        address: "Sorong, West Papua",
-      },
-      {
-        id: 10,
-        name: "Bonet Dance",
-        description: "Bonet Dance is a traditional dance from East Nusa Tenggara that reflects the spirit of togetherness and cooperation.",
-        province: "East Nusa Tenggara",
-        address: "Kupang, East Nusa Tenggara",
-      },
-    ];
-
-    const cultureContainer = document.getElementById("culture-items");
-
-    cultures.forEach((culture) => {
-      const cultureElement = document.createElement("div");
-      cultureElement.classList.add("col-md-4", "culture-card");
-      cultureElement.innerHTML = `
-        <div class="card mb-4 shadow-sm">
-          <img src="../${culture.name.toLowerCase().replace(/ /g, "-")}.jpg" class="card-img-top" alt="${culture.name}">
-          <div class="card-body">
-            <h5 class="card-title">${culture.name}</h5>
-            <p class="card-text">${culture.description}</p>
-            <p class="card-text"><small class="text-muted">${culture.province}</small></p>
-            <p class="card-text"><small class="text-muted">${culture.address}</small></p>
+    try {
+      const response = await fetch("../data/culture-en.json");
+      console.log("Fetch response status:", response.status); // Log response status
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log("Fetched data:", data); // Log fetched data
+      const cultureCardsContainer = document.getElementById("culture-cards");
+      data.culture.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "col-lg-3 col-md-6 mb-4"; // Menggunakan ukuran kolom yang lebih kecil agar 4 card dapat berjejer di dalam satu baris
+        card.innerHTML = `
+          <div class="card h-100">
+            <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jpg" class="card-img-top" alt="${item.name}" style="height: 200px;"> <!-- Menambahkan properti height untuk memperbesar gambar -->
+            <div class="card-body d-flex flex-column">
+              <div class="card-title card-title-custom">
+                <h5 class="m-0">${item.name}</h5>
+              </div>
+              <p class="card-text">${item.description}</p>
+              <p><strong>Province:</strong> ${item.province}</p>
+              <p><strong>Address:</strong> ${item.address}</p>
+            </div>
           </div>
-        </div>
-      `;
-      cultureContainer.appendChild(cultureElement);
-    });
+        `;
+        cultureCardsContainer.appendChild(card);
+      });
+    } catch (error) {
+      console.error("Error fetching the culture data:", error);
+      document.getElementById("culture-cards").innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
+    }
   },
 };
 
