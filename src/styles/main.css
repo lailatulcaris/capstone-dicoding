@@ -155,7 +155,6 @@ a {
 .culture-card .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .culture-card .card-title {
@@ -164,4 +163,12 @@ a {
 
 .culture-card .card-text {
   font-size: 1rem;
+  margin-top: auto; /* Menempatkan "Province" dan "Address" di bagian atas */
+}
+
+.card-title-custom {
+  background-color: #48B832;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
