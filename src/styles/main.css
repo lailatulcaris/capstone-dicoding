@@ -133,10 +133,6 @@ a {
 }
 
 /* card */
-#culture-list {
-  text-align: center;
-}
-
 #culture-items {
   display: flex;
   flex-wrap: wrap;
