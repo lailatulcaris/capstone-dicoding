@@ -142,6 +142,7 @@ a {
 
 .culture-card {
   flex: 0 0 calc(20% - 15px); /* Menyesuaikan lebar kolom untuk 5 kolom */
+  padding-bottom: 10%;
 }
 
 .culture-card .card {
