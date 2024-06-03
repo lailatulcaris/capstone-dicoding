@@ -27,13 +27,13 @@ const Pariwisata = {
         card.className = "col-lg-3 col-md-6 mb-4"; // Menggunakan ukuran kolom yang lebih kecil agar 4 card dapat berjejer di dalam satu baris
         card.innerHTML = `
           <div class="card h-100">
-            <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jg" class="card-img-top" alt="${item.name}" style="height: 200px;"> <!-- Menambahkan properti height untuk memperbesar gambar -->
+            <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jpeg" class="card-img-top" alt="${item.name}" style="height: 200px;"> <!-- Menambahkan properti height untuk memperbesar gambar -->
             <div class="card-body d-flex flex-column">
               <div class="card-title card-title-custom">
                 <h5 class="m-0">${item.name}</h5>
               </div>
               <p class="card-text">${item.description}</p>
-              <p><strong>Location:</strong> ${item.location}</p>
+              <p><strong>Province:</strong> ${item.province}</p>
               <p><strong>Address:</strong> ${item.address}</p>
             </div>
           </div>
