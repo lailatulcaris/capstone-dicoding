@@ -7,7 +7,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #E0FBE2;;
+  background-color: #e0fbe2;
 }
 
 body {
@@ -28,7 +28,7 @@ a {
 }
 
 #hero {
-  background: url("../public/images/heros/jumbotron.jpg");
+  background: url("../public/images/heros/hero-image_2.jpg");
   padding: 20px 0;
   color: white;
   text-shadow: #000 2px 2px 2px;
@@ -45,6 +45,25 @@ a {
   text-decoration: none;
   border-radius: 5px;
   margin-top: 20px;
+}
+
+.link-text {
+  float: center; /* Gunakan float untuk memposisikan ke kanan */
+  /* atau */
+  /* display: flex; */
+  /* justify-content: flex-end; */
+}
+
+.carousel-item img {
+  max-width: 300%;
+  max-height: 400px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  width: auto;
+  height: auto;
+}
+
+#carouselExampleIndicators {
+  max-width: 1900px; /* Sesuaikan lebar carousel sesuai kebutuhan */
+  margin: auto; /* Untuk membuat carousel berada di tengah */
 }
 
 /* Navbar */

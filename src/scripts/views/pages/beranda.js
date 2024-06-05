@@ -1,28 +1,55 @@
 const Beranda = {
   async render() {
     return `
-      <div class="hero bg-light p-5 rounded" id="hero">
-        <h1>Selamat datang di Travel in</h1>
-        <p class="lead">Discover the diverse culture and stunning destinations of Indonesia.</p>
-        <p>Explore the beauty of Indonesia, from its traditional dances to breathtaking landscapes.</p>
-        <a class="btn btn-primary btn-lg" id="hero-btn" href="#" role="button">Selengkapnya</a>
-      </div>
-      <div class="container mt-5">
-        <div class="section-title">
-          <center><h2>Budaya</h2></center>
-        </div>
-        <div class="row mt-4" id="culture-cards">
-          <!-- Culture cards will be inserted here by JavaScript -->
-        </div>
-      </div>
-      <div class="container mt-5">
-        <div class="section-title">
-          <center><h2>Pariwisata</h2></center>
-        </div>
-        <div class="row mt-4" id="tourism-cards">
-          <!-- Tourism cards will be inserted here by JavaScript -->
-        </div>
-      </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/heros/hero-1.jpg" class="d-block w-100" alt="Image 1">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/heros/hero-2.jpg" class="d-block w-100" alt="Image 2">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/heros/hero-3.jpg" class="d-block w-100" alt="Image 3">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  <div class="container mt-5">
+    <div class="section-title">
+      <center><h2>Budaya</h2></center>
+    </div>
+    <div class="row mt-4" id="culture-cards">
+      <!-- Culture cards will be inserted here by JavaScript -->
+    </div>
+    <div class="text-center mt-3">
+      <a href="#/budaya" class="link-text">Selengkapnya >>></a>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="section-title">
+      <center><h2>Pariwisata</h2></center>
+    </div>
+    <div class="row mt-4" id="tourism-cards">
+      <!-- Tourism cards will be inserted here by JavaScript -->
+    </div>
+    <div class="text-center mt-3">
+      <a href="#/pariwisata" class="link-text">Selengkapnya >>></a>
+    </div>
+  </div>
+  
     `;
   },
 
