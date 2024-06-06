@@ -9,13 +9,13 @@ const Beranda = {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../images/heros/hero-1.jpg" class="d-block w-100" alt="Image 1">
+      <img src="./hero-1.jpg" class="d-block w-100" alt="Image 1">
     </div>
     <div class="carousel-item">
-      <img src="../images/heros/hero-2.jpg" class="d-block w-100" alt="Image 2">
+      <img src="./hero-2.jpg" class="d-block w-100" alt="Image 2">
     </div>
     <div class="carousel-item">
-      <img src="../images/heros/hero-3.jpg" class="d-block w-100" alt="Image 3">
+      <img src="./hero-3.jpg" class="d-block w-100" alt="Image 3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
