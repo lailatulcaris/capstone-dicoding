@@ -1,3 +1,6 @@
+import TravelinSource from "../../data/travelin-source";
+import { createItemTemplate } from "../templates/template-creator";
+
 const Budaya = {
   async render() {
     return `
@@ -14,30 +17,14 @@ const Budaya = {
 
   async afterRender() {
     try {
-      const response = await fetch("../data/culture-en.json");
-      console.log("Fetch response status:", response.status); // Log response status
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      console.log("Fetched data:", data); // Log fetched data
+      const cultures = await TravelinSource.Cultures();
       const cultureCardsContainer = document.getElementById("culture-cards");
-      data.culture.forEach((item) => {
+      cultureCardsContainer.innerHTML = "";
+      
+      cultures.forEach((culture) => {
         const card = document.createElement("div");
-        card.className = "col-lg-3 col-md-6 mb-4"; // Menggunakan ukuran kolom yang lebih kecil agar 4 card dapat berjejer di dalam satu baris
-        card.innerHTML = `
-          <div class="card h-100">
-            <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jpg" class="card-img-top" alt="${item.name}" style="height: 200px;"> <!-- Menambahkan properti height untuk memperbesar gambar -->
-            <div class="card-body d-flex flex-column">
-              <div class="card-title card-title-custom">
-                <h5 class="m-0">${item.name}</h5>
-              </div>
-              <p class="card-text">${item.description}</p>
-              <p><strong>Province:</strong> ${item.province}</p>
-              <p><strong>Address:</strong> ${item.address}</p>
-            </div>
-          </div>
-        `;
+        card.className = "col-lg-3 col-md-6 mb-4";
+        card.innerHTML = createItemTemplate(culture);
         cultureCardsContainer.appendChild(card);
       });
     } catch (error) {
