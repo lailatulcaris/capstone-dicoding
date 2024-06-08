@@ -55,8 +55,8 @@ a {
 }
 
 .carousel-item img {
-  max-width: 300%;
-  max-height: 400px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  max-width: 400%;
+  max-height: 500px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
   width: auto;
   height: auto;
 }
@@ -132,6 +132,7 @@ a {
   background-color: #006666;
   color: white;
   box-shadow: 0 0 15px rgba(26, 185, 185, 0.4); /* Mengubah nilai offset y menjadi 0 */
+  margin-top: 20px;
 }
 
 .logo-img {
@@ -152,6 +153,16 @@ a {
   font-size: 30px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
 }
 
+.link-text {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #006666;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
 /* card */
 #culture-items {
   display: flex;
@@ -163,6 +174,8 @@ a {
 .culture-card {
   flex: 0 0 calc(20% - 15px); /* Menyesuaikan lebar kolom untuk 5 kolom */
   padding-bottom: 10%;
+  overflow: hidden;
+  position: relative;
 }
 
 .culture-card .card {
@@ -170,20 +183,28 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #f9f9f9; /* Warna latar belakang kartu */
+  border-radius: 20px; /* Border radius untuk sudut */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan kartu */
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Efek transisi saat kartu bergerak */
 }
-
 .culture-card .card-body {
   display: flex;
   flex-direction: column;
+  padding: 1.5rem;
 }
 
 .culture-card .card-title {
   font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333; /* Warna judul */
 }
 
 .culture-card .card-text {
   font-size: 1rem;
   margin-top: auto; /* Menempatkan "Province" dan "Address" di bagian atas */
+  color: #666; /* Warna teks */
 }
 
 .card-title-custom {
@@ -191,4 +212,38 @@ a {
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
+  border-top-left-radius: 10px; /* Border radius sudut untuk judul */
+  border-top-right-radius: 10px;
+}
+
+/* slogan */
+@keyframes fadeInUpText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  padding: 40px;
+  background: #006666;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin: 0 0 20px 0;
+  color: #fbf8f8;
+  animation: fadeInUpText 1.5s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  color: #fbf8f8;
+  animation: fadeInUpText 2s ease-out;
 }
