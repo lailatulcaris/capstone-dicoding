@@ -1,4 +1,5 @@
 import TravelinSource from "../../data/travelin-source";
+import { createTourItemTemplate } from "../templates/template-creator";
 
 const Pariwisata = {
   async render() {
@@ -17,9 +18,18 @@ const Pariwisata = {
   async afterRender() {
     try {
       const tours = await TravelinSource.Tours();
-      console.log("Tours:", tours);
-    } catch (error) {
+      const tourismCardsContainer = document.getElementById("tourism-cards");
+      tourismCardsContainer.innerHTML = "";
       
+      tours.forEach((tour) => {
+        const card = document.createElement("div");
+        card.className = "col-lg-3 col-md-6 mb-4";
+        card.innerHTML = createTourItemTemplate(tour);
+        tourismCardsContainer.appendChild(card);
+      });
+    } catch (error) {
+      console.error("Error fetching the tours data:", error);
+      document.getElementById("tourism-cards").innerHTML = '<p class="text-danger">Failed to load tours data. Please try again later.</p>';
     }
     // try {
     //   const response = await fetch("../data/tours-en.json");

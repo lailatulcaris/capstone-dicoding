@@ -57,12 +57,12 @@ const Beranda = {
     try {
       // Fetch culture data
       const cultureResponse = await fetch("../data/culture-en.json");
-      console.log("Fetch culture response status:", cultureResponse.status);
+      // console.log("Fetch culture response status:", cultureResponse.status);
       if (!cultureResponse.ok) {
         throw new Error("Network response for culture data was not ok");
       }
       const cultureData = await cultureResponse.json();
-      console.log("Fetched culture data:", cultureData);
+      // console.log("Fetched culture data:", cultureData);
 
       // Render culture cards
       const cultureCardsContainer = document.getElementById("culture-cards");

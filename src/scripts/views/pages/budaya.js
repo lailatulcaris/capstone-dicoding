@@ -1,5 +1,5 @@
 import TravelinSource from "../../data/travelin-source";
-import { createItemTemplate } from "../templates/template-creator";
+import { createCultureItemTemplate } from "../templates/template-creator";
 
 const Budaya = {
   async render() {
@@ -24,7 +24,7 @@ const Budaya = {
       cultures.forEach((culture) => {
         const card = document.createElement("div");
         card.className = "col-lg-3 col-md-6 mb-4";
-        card.innerHTML = createItemTemplate(culture);
+        card.innerHTML = createCultureItemTemplate(culture);
         cultureCardsContainer.appendChild(card);
       });
     } catch (error) {
