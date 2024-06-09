@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const Beranda = {
   async render() {
     return `
@@ -9,13 +10,13 @@ const Beranda = {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../images/heros/hero-1.jpg" class="d-block w-100" alt="Image 1">
+      <img src="./hero-1.jpg" class="d-block w-100" alt="Image 1">
     </div>
     <div class="carousel-item">
-      <img src="../images/heros/hero-2.jpg" class="d-block w-100" alt="Image 2">
+      <img src="./hero-2.jpg" class="d-block w-100" alt="Image 2">
     </div>
     <div class="carousel-item">
-      <img src="../images/heros/hero-3.jpg" class="d-block w-100" alt="Image 3">
+      <img src="./hero-3.jpg" class="d-block w-100" alt="Image 3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -27,6 +28,12 @@ const Beranda = {
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+ <div class="hero-content">
+        <h1>Travel In</h1>
+        <p>Sambutlah Keindahan Budaya dan Pariwisata yang Memikat Hati!</p>
+    </div>
+
   <div class="container mt-5">
     <div class="section-title">
       <center><h2>Budaya</h2></center>
@@ -56,22 +63,26 @@ const Beranda = {
   async afterRender() {
     try {
       // Fetch culture data
+
       const cultureResponse = await fetch("../data/culture-en.json");
-      console.log("Fetch culture response status:", cultureResponse.status);
+      // console.log("Fetch culture response status:", cultureResponse.status);
+
       if (!cultureResponse.ok) {
-        throw new Error("Network response for culture data was not ok");
+        throw new Error('Network response for culture data was not ok');
       }
       const cultureData = await cultureResponse.json();
-      console.log("Fetched culture data:", cultureData);
+
+      // console.log("Fetched culture data:", cultureData);
+
 
       // Render culture cards
-      const cultureCardsContainer = document.getElementById("culture-cards");
+      const cultureCardsContainer = document.getElementById('culture-cards');
       cultureData.culture.slice(0, 4).forEach((item) => {
-        const card = document.createElement("div");
-        card.className = "col-lg-3 col-md-6 mb-4";
+        const card = document.createElement('div');
+        card.className = 'col-lg-3 col-md-6 mb-4';
         card.innerHTML = `
           <div class="card h-100">
-            <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jpg" class="card-img-top" alt="${item.name}" style="height: 200px;">
+            <img src="../${item.name.toLowerCase().replace(/ /g, '-')}.jpg" class="card-img-top" alt="${item.name}" style="height: 200px;">
             <div class="card-body d-flex flex-column">
               <div class="card-title card-title-custom">
                 <h5 class="m-0">${item.name}</h5>
@@ -86,22 +97,25 @@ const Beranda = {
       });
 
       // Fetch tourism data
+
       const tourismResponse = await fetch("../data/tours-en.json");
-      console.log("Fetch tourism response status:", tourismResponse.status);
+      // console.log("Fetch tourism response status:", tourismResponse.status);
+
       if (!tourismResponse.ok) {
-        throw new Error("Network response for tourism data was not ok");
+        throw new Error('Network response for tourism data was not ok');
       }
       const tourismData = await tourismResponse.json();
-      console.log("Fetched tourism data:", tourismData);
+
+      // console.log("Fetched tourism data:", tourismData);
 
       // Render tourism cards
-      const tourismCardsContainer = document.getElementById("tourism-cards");
+      const tourismCardsContainer = document.getElementById('tourism-cards');
       tourismData.tours.slice(0, 4).forEach((item) => {
-        const card = document.createElement("div");
-        card.className = "col-lg-3 col-md-6 mb-4";
+        const card = document.createElement('div');
+        card.className = 'col-lg-3 col-md-6 mb-4';
         card.innerHTML = `
           <div class="card h-100">
-          <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jpeg" class="card-img-top" alt="${item.name}" style="height: 200px;">
+          <img src="../${item.name.toLowerCase().replace(/ /g, '-')}.jpeg" class="card-img-top" alt="${item.name}" style="height: 200px;">
             <div class="card-body d-flex flex-column">
               <div class="card-title card-title-custom">
                 <h5 class="m-0">${item.name}</h5>
@@ -115,9 +129,9 @@ const Beranda = {
         tourismCardsContainer.appendChild(card);
       });
     } catch (error) {
-      console.error("Error fetching or rendering data:", error);
-      document.getElementById("culture-cards").innerHTML = '<p class="text-danger">Failed to load data. Please try again later.</p>';
-      document.getElementById("tourism-cards").innerHTML = '<p class="text-danger">Failed to load data. Please try again later.</p>';
+      console.error('Error fetching or rendering data:', error);
+      document.getElementById('culture-cards').innerHTML = '<p class="text-danger">Failed to load data. Please try again later.</p>';
+      document.getElementById('tourism-cards').innerHTML = '<p class="text-danger">Failed to load data. Please try again later.</p>';
     }
   },
 };
