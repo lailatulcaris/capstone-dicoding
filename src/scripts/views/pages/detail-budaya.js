@@ -20,9 +20,13 @@ const DetailBudaya = {
     try {
       const url = UrlParser.parseActiveUrlWithoutCombiner();
       const culture = await TravelinSource.DetailCulture(url.id);
-      console.log(culture);
       const cultureDetailContainer = document.getElementById("culture-cards");
-      cultureDetailContainer.innerHTML = createCultureDetailTemplate(culture);
+
+      const card = document.createElement("div");
+      card.className = "col-lg-3 col-md-6 mb-4";
+      card.innerHTML = createCultureDetailTemplate(culture);
+      cultureDetailContainer.appendChild(card);
+
     } catch (error) {
       console.error("Error fetching the culture data:", error);
       document.getElementById("culture-detail").innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';

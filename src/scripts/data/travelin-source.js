@@ -19,6 +19,12 @@ class TravelinSource {
     const responseJson = await response.json();
     return responseJson.data;
   }
+
+  static async DetailTour(id) {
+    const response = await fetch(API_ENDPOINT.DETAILTOUR(id));
+    const responseJson = await response.json();
+    return responseJson.data;
+  }
 }
 
 export default TravelinSource;
