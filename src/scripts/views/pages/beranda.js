@@ -87,12 +87,12 @@ const Beranda = {
 
       // Fetch tourism data
       const tourismResponse = await fetch("../data/tours-en.json");
-      console.log("Fetch tourism response status:", tourismResponse.status);
+      // console.log("Fetch tourism response status:", tourismResponse.status);
       if (!tourismResponse.ok) {
         throw new Error("Network response for tourism data was not ok");
       }
       const tourismData = await tourismResponse.json();
-      console.log("Fetched tourism data:", tourismData);
+      // console.log("Fetched tourism data:", tourismData);
 
       // Render tourism cards
       const tourismCardsContainer = document.getElementById("tourism-cards");

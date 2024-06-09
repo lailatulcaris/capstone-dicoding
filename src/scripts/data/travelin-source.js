@@ -14,9 +14,10 @@ class TravelinSource {
     return responseJson.data;
   }
 
-  static async Detail(id) {
-    const response = await fetch(API_ENDPOINT.DETAIL(id));
-    return response.json();
+  static async DetailCulture(id) {
+    const response = await fetch(API_ENDPOINT.DETAILCULTURE(id));
+    const responseJson = await response.json();
+    return responseJson.data;
   }
 }
 

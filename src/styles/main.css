@@ -160,6 +160,10 @@ a {
   gap: 15px;
 }
 
+.card {
+  transition: all 150ms ease-in;
+}
+
 .culture-card {
   flex: 0 0 calc(20% - 15px); /* Menyesuaikan lebar kolom untuk 5 kolom */
   padding-bottom: 10%;
@@ -186,9 +190,21 @@ a {
   margin-top: auto; /* Menempatkan "Province" dan "Address" di bagian atas */
 }
 
+.card:hover,
+.card:focus-visible {
+  scale: 1.05;
+  box-shadow: 0 2px 4px 2px #33333377;
+  
+}
+
 .card-title-custom {
   background-color: #48b832;
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.card-link{
+  text-decoration: none;
+  color: black;
 }
