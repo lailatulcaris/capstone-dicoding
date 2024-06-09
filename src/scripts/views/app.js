@@ -10,9 +10,9 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    console.log(url);
-    console.log(routes[url]);
-    console.log(page);
+    // console.log(url);
+    // console.log(routes[url]);
+    // console.log(page);
 
     if (page) {
       try {
