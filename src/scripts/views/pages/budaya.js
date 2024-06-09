@@ -1,3 +1,4 @@
+
 import TravelinSource from "../../data/travelin-source";
 import { createCultureItemTemplate } from "../templates/template-creator";
 
@@ -17,6 +18,7 @@ const Budaya = {
 
   async afterRender() {
     try {
+
       const cultures = await TravelinSource.Cultures();
       const cultureCardsContainer = document.getElementById("culture-cards");
       cultureCardsContainer.innerHTML = "";
@@ -25,11 +27,12 @@ const Budaya = {
         const card = document.createElement("div");
         card.className = "col-lg-3 col-md-6 mb-4";
         card.innerHTML = createCultureItemTemplate(culture);
+
         cultureCardsContainer.appendChild(card);
       });
     } catch (error) {
-      console.error("Error fetching the culture data:", error);
-      document.getElementById("culture-cards").innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
+      console.error('Error fetching the culture data:', error);
+      document.getElementById('culture-cards').innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
     }
   },
 };

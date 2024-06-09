@@ -1,5 +1,6 @@
-import UrlParser from '../routes/url-parser.js';
-import routes from '../routes/routes.js';
+/* eslint-disable no-underscore-dangle */
+import UrlParser from '../routes/url-parser';
+import routes from '../routes/routes';
 
 class App {
   constructor({ content }) {
