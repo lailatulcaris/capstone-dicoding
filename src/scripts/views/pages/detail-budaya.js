@@ -1,39 +1,56 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable padded-blocks */
-/* eslint-disable quotes */
-/* eslint-disable linebreak-style */
-import TravelinSource from "../../data/travelin-source";
-import { createCultureDetailTemplate } from "../templates/template-creator";
 import UrlParser from "../../routes/url-parser";
 
 const DetailBudaya = {
   async render() {
     return `
-      <div class="container mt-5">
-        <div class="section-title">
-          <center><h2>Detail Budaya</h2></center>
-        </div>
-        <div class="row mt-4" id="culture-cards">
-          <!-- Culture details will be inserted here by JavaScript -->
-        </div>
-      </div>
+      <section class="container my-5" id="culture-details">
+        <!-- Culture details will be inserted here by JavaScript -->
+      </section><br>
     `;
   },
 
   async afterRender() {
     try {
+      const cultureDetailsContainer = document.getElementById("culture-details");
       const url = UrlParser.parseActiveUrlWithoutCombiner();
-      const culture = await TravelinSource.DetailCulture(url.id);
-      const cultureDetailContainer = document.getElementById("culture-cards");
+      const cultureId = url.id;
 
-      const card = document.createElement("div");
-      card.className = "col-lg-3 col-md-6 mb-4";
-      card.innerHTML = createCultureDetailTemplate(culture);
-      cultureDetailContainer.appendChild(card);
+      const response = await fetch(`http://54.255.130.64:5000/cultures#${cultureId}`);
+      const data = await response.json(); // Ubah ke response.json()
 
+      if (data.status === 200 && data.data.length > 0) {
+        const culture = data.data.find((item) => item.id === parseInt(cultureId));
+
+        if (culture) {
+          const cultureDetailTemplate = `
+            <div class="row">
+              <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <img src="${culture.image}" alt="${culture.name}" class="img-fluid" />
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <h2 class="text-center">${culture.name}</h2><br>
+                <p class="text text-justify">${culture.description}</p>
+                <p class="text text-justify"><b>Province:</b> ${culture.province}</p>
+                <p class="text text-justify"><b>Address:</b> ${culture.address}</p>
+                <div class="text-center mt-4">
+                  <button class="btn btn-primary">
+                    <i class="bi bi-geo-alt-fill"></i> Lokasi
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr>
+          `;
+          cultureDetailsContainer.innerHTML = cultureDetailTemplate;
+        } else {
+          cultureDetailsContainer.innerHTML = '<p class="text-danger">Culture not found.</p>';
+        }
+      } else {
+        cultureDetailsContainer.innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
+      }
     } catch (error) {
       console.error("Error fetching the culture data:", error);
-      document.getElementById("culture-detail").innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
+      cultureDetailsContainer.innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
     }
   },
 };
