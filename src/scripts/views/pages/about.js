@@ -1,6 +1,6 @@
 const About = {
-  async render() {
-    return `
+    async render() {
+        return `
       <div class="container mt-5">
         <div class="section-title">
             <center><h2>Anggota Kelompok</h2></center>
@@ -8,7 +8,7 @@ const About = {
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="avatar.png" class="card-img-top" alt="...">
+                    <img src="aldy.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Muhammad Rizaldy Alifiansyah</h5>
                         <p class="card-text">Project Manager</p>
@@ -19,7 +19,7 @@ const About = {
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="avatar.png" class="card-img-top" alt="...">
+                    <img src="carisma.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Lailatul Carisma Putri</h5>
                         <p class="card-text">Front End Developer</p>
@@ -30,7 +30,7 @@ const About = {
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="avatar.png" class="card-img-top" alt="...">
+                    <img src="syarif.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Muhammad Syarif Yahya SH</h5>
                         <p class="card-text">Back End Developer</p>
@@ -42,11 +42,11 @@ const About = {
         </div>
     </div>
     `;
-  },
+    },
 
-  async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-  },
+    async afterRender() {
+        // Fungsi ini akan dipanggil setelah render()
+    },
 };
 
 export default About;
