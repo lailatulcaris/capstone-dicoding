@@ -32,11 +32,6 @@ const DetailBudaya = {
                 <p class="text text-justify">${culture.description}</p>
                 <p class="text text-justify"><b>Province:</b> ${culture.province}</p>
                 <p class="text text-justify"><b>Address:</b> ${culture.address}</p>
-                <div class="text-center mt-4">
-                  <button class="btn btn-primary">
-                    <i class="bi bi-geo-alt-fill"></i> Lokasi
-                  </button>
-                </div>
               </div>
             </div>
             <hr>
