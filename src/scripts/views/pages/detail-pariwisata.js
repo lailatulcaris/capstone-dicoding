@@ -33,7 +33,7 @@ const DetailPariwisata = {
                 <p class="text text-justify"><b>Province:</b> ${tour.province}</p>
                 <p class="text text-justify"><b>Address:</b> ${tour.address}</p>
                 <div class="text-center mt-4">
-                  <button class="btn btn-primary">
+                  <button class="btn btn-primary" onclick="window.open('${tour.map}', '_blank');">
                     <i class="bi bi-geo-alt-fill"></i> Lokasi
                   </button>
                 </div>
