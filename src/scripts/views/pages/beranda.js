@@ -10,13 +10,13 @@ const Beranda = {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../images/heros/hero-1.jpg" class="d-block w-100" alt="Image 1">
+      <img src="./hero-1.jpg" class="d-block w-100" alt="Image 1">
     </div>
     <div class="carousel-item">
-      <img src="../images/heros/hero-2.jpg" class="d-block w-100" alt="Image 2">
+      <img src="./hero-2.jpg" class="d-block w-100" alt="Image 2">
     </div>
     <div class="carousel-item">
-      <img src="../images/heros/hero-3.jpg" class="d-block w-100" alt="Image 3">
+      <img src="./hero-3.jpg" class="d-block w-100" alt="Image 3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -63,13 +63,17 @@ const Beranda = {
   async afterRender() {
     try {
       // Fetch culture data
-      const cultureResponse = await fetch('../data/culture-en.json');
-      console.log('Fetch culture response status:', cultureResponse.status);
+
+      const cultureResponse = await fetch("../data/culture-en.json");
+      // console.log("Fetch culture response status:", cultureResponse.status);
+
       if (!cultureResponse.ok) {
         throw new Error('Network response for culture data was not ok');
       }
       const cultureData = await cultureResponse.json();
-      console.log('Fetched culture data:', cultureData);
+
+      // console.log("Fetched culture data:", cultureData);
+
 
       // Render culture cards
       const cultureCardsContainer = document.getElementById('culture-cards');
@@ -93,13 +97,16 @@ const Beranda = {
       });
 
       // Fetch tourism data
-      const tourismResponse = await fetch('../data/tours-en.json');
-      console.log('Fetch tourism response status:', tourismResponse.status);
+
+      const tourismResponse = await fetch("../data/tours-en.json");
+      // console.log("Fetch tourism response status:", tourismResponse.status);
+
       if (!tourismResponse.ok) {
         throw new Error('Network response for tourism data was not ok');
       }
       const tourismData = await tourismResponse.json();
-      console.log('Fetched tourism data:', tourismData);
+
+      // console.log("Fetched tourism data:", tourismData);
 
       // Render tourism cards
       const tourismCardsContainer = document.getElementById('tourism-cards');
