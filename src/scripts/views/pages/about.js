@@ -12,8 +12,8 @@ const About = {
                     <div class="card-body">
                         <h5 class="card-title">Muhammad Rizaldy Alifiansyah</h5>
                         <p class="card-text">Project Manager</p>
-                        <a href="https://github.com/Mrzalf" class="btn btn-primary"><i class="bi bi-github"></i> GitHub</a>
-                        <a href="https://www.linkedin.com/in/mrzalf/" class="btn btn-primary"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/Mrzalf" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/mrzalf/" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -23,8 +23,8 @@ const About = {
                     <div class="card-body">
                         <h5 class="card-title">Lailatul Carisma Putri</h5>
                         <p class="card-text">Front End Developer</p>
-                        <a href="https://github.com/lailatulcaris" class="btn btn-primary"><i class="bi bi-github"></i> GitHub</a>
-                        <a href="https://www.linkedin.com/in/lailatul-carisma-putri-50525330a/" class="btn btn-primary"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/lailatulcaris" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/lailatul-carisma-putri-50525330a/" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,8 @@ const About = {
                     <div class="card-body">
                         <h5 class="card-title">Muhammad Syarif Yahya SH</h5>
                         <p class="card-text">Back End Developer</p>
-                        <a href="https://github.com/syarifyahyash" class="btn btn-primary"><i class="bi bi-github"></i> GitHub</a>
-                        <a href="https://www.linkedin.com/in/muhammad-syarif-yahya-shafaruddin-hermawan-476193256/" class="btn btn-primary"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/syarifyahyash" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/muhammad-syarif-yahya-shafaruddin-hermawan-476193256/" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
             </div>
