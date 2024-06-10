@@ -4,8 +4,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
-
-
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -44,6 +42,10 @@ module.exports = {
           globOptions: {
             ignore: ['**/images/**'],
           },
+        },
+        {
+          from: path.resolve(__dirname, 'src/public/images/icons'),
+          to: path.resolve(__dirname, 'dist/images/icons'),
         },
       ],
     }),

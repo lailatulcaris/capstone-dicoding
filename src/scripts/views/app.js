@@ -17,7 +17,7 @@ class App {
     if (page) {
       try {
         this._content.innerHTML = await page.render();
-        console.log(this._content);
+        // console.log(this._content);
         await page.afterRender();
       } catch (error) {
         this._content.innerHTML = '<h2>Ups.. halaman tidak ditemukan!</h2>';
