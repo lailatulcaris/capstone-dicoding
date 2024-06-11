@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -215,7 +215,6 @@ a {
 .card:focus-visible {
   scale: 1.05;
   box-shadow: 0 2px 4px 2px #33333377;
-  
 }
 
 .card-title-custom {
@@ -259,7 +258,7 @@ a {
   animation: fadeInUpText 2s ease-out;
 }
 
-.card-link{
+.card-link {
   text-decoration: none;
   color: black;
 }
