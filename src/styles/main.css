@@ -27,26 +27,6 @@ a {
   min-height: 44px;
 }
 
-#hero {
-  /* background: url("../public/images/heros/hero-image_2.jpg"); */
-  padding: 20px 0;
-  color: white;
-  text-shadow: #000 2px 2px 2px;
-  font-weight: 500;
-  font-size: 2em;
-}
-
-#hero-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
 .link-text {
   float: center; /* Gunakan float untuk memposisikan ke kanan */
   /* atau */
@@ -102,29 +82,6 @@ a {
 .brand h1 {
   margin: 0;
   font-size: 2em;
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  align-items: center; /* Centers nav items vertically */
-}
-
-.nav-menu li {
-  margin-right: 20px;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav-menu a:hover {
-  color: #bf1722;
-}
-
-.hamburger-btn {
-  display: none;
 }
 
 /* Footer Section */
