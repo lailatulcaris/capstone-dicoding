@@ -60,5 +60,4 @@ const createTourDetailTemplate = (data) => `
 </div>
 `;
 
-
 export { createCultureItemTemplate, createCultureDetailTemplate, createTourItemTemplate, createTourDetailTemplate };
