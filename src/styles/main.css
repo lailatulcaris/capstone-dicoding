@@ -172,7 +172,13 @@ a {
 }
 
 .card {
-  transition: all 150ms ease-in;
+  border-radius: 10px; /* Menambahkan lekukan pada sudut card */
+  overflow: hidden; /* Agar gambar atau konten dalam card tidak melewati batas lekukan */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+}
+
+.card p {
+  text-align: justify;
 }
 
 .culture-card {
@@ -208,7 +214,7 @@ a {
 .culture-card .card-text {
   font-size: 1rem;
   margin-top: auto; /* Menempatkan "Province" dan "Address" di bagian atas */
-  color: #666; /* Warna teks */
+  color: #b63c85; /* Warna teks */
 }
 
 .card:hover,
@@ -222,43 +228,12 @@ a {
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border-top-left-radius: 10px; /* Border radius sudut untuk judul */
-  border-top-right-radius: 10px;
-}
-
-/* slogan */
-@keyframes fadeInUpText {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-content {
-  text-align: center;
-  padding: 40px;
-  background: #006666;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hero-content h1 {
-  font-size: 2.5em;
-  margin: 0 0 20px 0;
-  color: #fbf8f8;
-  animation: fadeInUpText 1.5s ease-out;
-}
-
-.hero-content p {
-  font-size: 1.2em;
-  color: #fbf8f8;
-  animation: fadeInUpText 2s ease-out;
+  border-radius: 10px; /* Menjadikan semua sudut menjadi melengkung */
+  text-align: center; /* Untuk membuat teks berada di tengah */
 }
 
 .card-link {
   text-decoration: none;
-  color: black;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi saat hover */
 }
