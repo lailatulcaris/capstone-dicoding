@@ -185,7 +185,7 @@ a {
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border-radius: 10px; /* Menjadikan semua sudut menjadi melengkung */
+  border-radius: 5px; /* Menjadikan semua sudut menjadi melengkung */
   text-align: center; /* Untuk membuat teks berada di tengah */
 }
 
