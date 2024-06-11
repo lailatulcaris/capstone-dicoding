@@ -1,4 +1,6 @@
-
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+/* eslint-disable linebreak-style */
 import TravelinSource from "../../data/travelin-source";
 import { createCultureItemTemplate } from "../templates/template-creator";
 
@@ -9,6 +11,10 @@ const Budaya = {
         <div class="section-title">
           <center><h2>Budaya</h2></center>
         </div>
+        <!-- Search feature -->
+        <div class="search-container mt-4">
+          <input type="text" id="search-input" placeholder="Cari provinsi..." class="form-control">
+        </div>
         <div class="row mt-4" id="culture-cards">
           <!-- Culture cards will be inserted here by JavaScript -->
         </div>
@@ -18,17 +24,32 @@ const Budaya = {
 
   async afterRender() {
     try {
-
       const cultures = await TravelinSource.Cultures();
       const cultureCardsContainer = document.getElementById("culture-cards");
-      cultureCardsContainer.innerHTML = "";
-      
-      cultures.forEach((culture) => {
-        const card = document.createElement("div");
-        card.className = "col-lg-3 col-md-6 mb-4";
-        card.innerHTML = createCultureItemTemplate(culture);
+      const searchInput = document.getElementById("search-input");
 
-        cultureCardsContainer.appendChild(card);
+      function displayCultureCards(items) {
+        cultureCardsContainer.innerHTML = '';
+        if (items.length === 0) {
+          cultureCardsContainer.innerHTML = '<p class="text-danger">Tidak ada data yang ditemukan.</p>';
+          return;
+        }
+        items.forEach((culture) => {
+          const card = document.createElement("div");
+          card.className = "col-lg-3 col-md-6 mb-4";
+          card.innerHTML = createCultureItemTemplate(culture);
+          cultureCardsContainer.appendChild(card);
+        });
+      }
+
+      displayCultureCards(cultures);
+
+      searchInput.addEventListener("input", (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        const filteredItems = cultures.filter((culture) =>
+          culture.province.toLowerCase().includes(searchTerm)
+        );
+        displayCultureCards(filteredItems);
       });
     } catch (error) {
       console.error('Error fetching the culture data:', error);

@@ -5,31 +5,23 @@ import UrlParser from "../../routes/url-parser";
 const DetailBudaya = {
   async render() {
     return `
-      <div class="container mt-5">
-        <div class="section-title">
-          <center><h2>Detail Budaya</h2></center>
-        </div>
-        <div class="row mt-4" id="culture-cards">
-          <!-- Culture details will be inserted here by JavaScript -->
-        </div>
-      </div>
+      <section class="container my-5" id="culture-details">
+        <!-- Culture details will be inserted here by JavaScript -->
+      </section><br>
     `;
   },
 
   async afterRender() {
     try {
+      const cultureDetailsContainer = document.getElementById("culture-details");
       const url = UrlParser.parseActiveUrlWithoutCombiner();
       const culture = await TravelinSource.DetailCulture(url.id);
-      const cultureDetailContainer = document.getElementById("culture-cards");
 
-      const card = document.createElement("div");
-      card.className = "col-lg-3 col-md-6 mb-4";
-      card.innerHTML = createCultureDetailTemplate(culture);
-      cultureDetailContainer.appendChild(card);
+      cultureDetailsContainer.innerHTML = createCultureDetailTemplate(culture);
 
     } catch (error) {
       console.error("Error fetching the culture data:", error);
-      document.getElementById("culture-detail").innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
+      cultureDetailsContainer.innerHTML = '<p class="text-danger">Failed to load culture data. Please try again later.</p>';
     }
   },
 };

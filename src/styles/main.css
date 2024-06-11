@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -25,26 +25,6 @@ a {
   display: inline-block;
   min-width: 44px;
   min-height: 44px;
-}
-
-#hero {
-  /* background: url("../public/images/heros/hero-image_2.jpg"); */
-  padding: 20px 0;
-  color: white;
-  text-shadow: #000 2px 2px 2px;
-  font-weight: 500;
-  font-size: 2em;
-}
-
-#hero-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
 }
 
 .link-text {
@@ -104,29 +84,6 @@ a {
   font-size: 2em;
 }
 
-.nav-menu {
-  display: flex;
-  list-style: none;
-  align-items: center; /* Centers nav items vertically */
-}
-
-.nav-menu li {
-  margin-right: 20px;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav-menu a:hover {
-  color: #bf1722;
-}
-
-.hamburger-btn {
-  display: none;
-}
-
 /* Footer Section */
 .footer {
   background-color: #006666;
@@ -172,7 +129,13 @@ a {
 }
 
 .card {
-  transition: all 150ms ease-in;
+  border-radius: 10px; /* Menambahkan lekukan pada sudut card */
+  overflow: hidden; /* Agar gambar atau konten dalam card tidak melewati batas lekukan */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+}
+
+.card p {
+  text-align: justify;
 }
 
 .culture-card {
@@ -208,14 +171,13 @@ a {
 .culture-card .card-text {
   font-size: 1rem;
   margin-top: auto; /* Menempatkan "Province" dan "Address" di bagian atas */
-  color: #666; /* Warna teks */
+  color: #b63c85; /* Warna teks */
 }
 
 .card:hover,
 .card:focus-visible {
   scale: 1.05;
   box-shadow: 0 2px 4px 2px #33333377;
-  
 }
 
 .card-title-custom {
@@ -223,43 +185,12 @@ a {
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border-top-left-radius: 10px; /* Border radius sudut untuk judul */
-  border-top-right-radius: 10px;
+  border-radius: 5px; /* Menjadikan semua sudut menjadi melengkung */
+  text-align: center; /* Untuk membuat teks berada di tengah */
 }
 
-/* slogan */
-@keyframes fadeInUpText {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-content {
-  text-align: center;
-  padding: 40px;
-  background: #006666;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hero-content h1 {
-  font-size: 2.5em;
-  margin: 0 0 20px 0;
-  color: #fbf8f8;
-  animation: fadeInUpText 1.5s ease-out;
-}
-
-.hero-content p {
-  font-size: 1.2em;
-  color: #fbf8f8;
-  animation: fadeInUpText 2s ease-out;
-}
-
-.card-link{
+.card-link {
   text-decoration: none;
-  color: black;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi saat hover */
 }
