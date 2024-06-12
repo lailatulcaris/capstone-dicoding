@@ -27,16 +27,9 @@ a {
   min-height: 44px;
 }
 
-.link-text {
-  float: center; /* Gunakan float untuk memposisikan ke kanan */
-  /* atau */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-}
-
 .carousel-item img {
   max-width: 400%;
-  max-height: 500px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  max-height: 580px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
   width: auto;
   height: auto;
 }
@@ -44,6 +37,25 @@ a {
 #carouselExampleIndicators {
   max-width: 1900px; /* Sesuaikan lebar carousel sesuai kebutuhan */
   margin: auto; /* Untuk membuat carousel berada di tengah */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease forwards;
+  opacity: 0;
+  font-size: 20px; /* Ukuran font yang diperbesar */
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Navbar */
@@ -82,6 +94,34 @@ a {
 .brand h1 {
   margin: 0;
   font-size: 2em;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center; /* Centers nav items vertically */
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: #bf1722;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+/* search */
+.form-control {
+  width: 50%;
 }
 
 /* Footer Section */
@@ -129,13 +169,7 @@ a {
 }
 
 .card {
-  border-radius: 10px; /* Menambahkan lekukan pada sudut card */
-  overflow: hidden; /* Agar gambar atau konten dalam card tidak melewati batas lekukan */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
-}
-
-.card p {
-  text-align: justify;
+  transition: all 150ms ease-in;
 }
 
 .culture-card {
@@ -171,7 +205,7 @@ a {
 .culture-card .card-text {
   font-size: 1rem;
   margin-top: auto; /* Menempatkan "Province" dan "Address" di bagian atas */
-  color: #b63c85; /* Warna teks */
+  color: #666; /* Warna teks */
 }
 
 .card:hover,
@@ -191,8 +225,7 @@ a {
 
 .card-link {
   text-decoration: none;
-  color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi saat hover */
+  color: black;
 }
 
 .container {

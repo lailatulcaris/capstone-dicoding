@@ -11,7 +11,7 @@ const Beranda = {
       <!-- Carousel items -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./hero-1.jpg" class="d-block w-100" alt="Image 1">
+          <img src="./hero-3.jpg" class="d-block w-100" alt="Image 1">
           <div class="carousel-caption d-none d-md-block">
             <h5>SELAMAT DATANG DI TRAVEL IN</h5>
             <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
@@ -25,7 +25,7 @@ const Beranda = {
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./hero-3.jpg" class="d-block w-100" alt="Image 3">
+          <img src="./hero-1.jpg" class="d-block w-100" alt="Image 3">
           <div class="carousel-caption d-none d-md-block">
             <h5>SELAMAT DATANG DI TRAVEL IN</h5>
             <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
@@ -44,12 +44,12 @@ const Beranda = {
     </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#D49E7B" fill-opacity="0.7" d="M0,224L40,229.3C80,235,160,245,240,213.3C320,181,400,107,480,69.3C560,32,640,32,720,69.3C800,107,880,181,960,202.7C1040,224,1120,192,1200,202.7C1280,213,1360,267,1400,293.3L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+  <path fill="#b47552" fill-opacity="0.7" d="M0,224L40,229.3C80,235,160,245,240,213.3C320,181,400,107,480,69.3C560,32,640,32,720,69.3C800,107,880,181,960,202.7C1040,224,1120,192,1200,202.7C1280,213,1360,267,1400,293.3L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
 </svg>
 
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>Budaya</h2></center>
+        <center><h2>BUDAYA</h2></center>
       </div>
       <div class="row mt-4" id="culture-cards">
         <!-- Culture cards will be inserted here by JavaScript -->
@@ -61,7 +61,7 @@ const Beranda = {
 
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>Pariwisata</h2></center>
+        <center><h2>PARIWISATA</h2></center>
       </div>
       <div class="row mt-4" id="tourism-cards">
         <!-- Tourism cards will be inserted here by JavaScript -->
