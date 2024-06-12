@@ -9,11 +9,11 @@ const Budaya = {
     return `
       <div class="container mt-5">
         <div class="section-title">
-          <center><h2>Budaya</h2></center>
+          <center><h2>BUDAYA</h2></center>
         </div>
         <!-- Search feature -->
-        <div class="search-container mt-4">
-          <input type="text" id="search-input" placeholder="Cari provinsi..." class="form-control">
+        <div  class="search-container mt-4 d-flex justify-content-center">
+          <input type="text" id="search-input" placeholder="Cari Provinsi atau Judul..." class="form-control">
         </div>
         <div class="row mt-4" id="culture-cards">
           <!-- Culture cards will be inserted here by JavaScript -->
@@ -47,7 +47,8 @@ const Budaya = {
       searchInput.addEventListener("input", (event) => {
         const searchTerm = event.target.value.toLowerCase();
         const filteredItems = cultures.filter((culture) =>
-          culture.province.toLowerCase().includes(searchTerm)
+          culture.province.toLowerCase().includes(searchTerm) ||
+          culture.name.toLowerCase().includes(searchTerm)
         );
         displayCultureCards(filteredItems);
       });

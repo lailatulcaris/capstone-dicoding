@@ -11,7 +11,7 @@ const Beranda = {
       <!-- Carousel items -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./hero-1.jpg" class="d-block w-100" alt="Image 1">
+          <img src="./hero-3.jpg" class="d-block w-100" alt="Image 1">
           <div class="carousel-caption d-none d-md-block">
             <h5>SELAMAT DATANG DI TRAVEL IN</h5>
             <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
@@ -25,7 +25,7 @@ const Beranda = {
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./hero-3.jpg" class="d-block w-100" alt="Image 3">
+          <img src="./hero-1.jpg" class="d-block w-100" alt="Image 3">
           <div class="carousel-caption d-none d-md-block">
             <h5>SELAMAT DATANG DI TRAVEL IN</h5>
             <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
@@ -45,7 +45,7 @@ const Beranda = {
 
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>Budaya</h2></center>
+        <center><h2>BUDAYA</h2></center>
       </div>
       <div class="row mt-4" id="culture-cards">
         <!-- Culture cards will be inserted here by JavaScript -->
@@ -56,7 +56,7 @@ const Beranda = {
     </div>
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>Pariwisata</h2></center>
+        <center><h2>PARIWISATA</h2></center>
       </div>
       <div class="row mt-4" id="tourism-cards">
         <!-- Tourism cards will be inserted here by JavaScript -->
