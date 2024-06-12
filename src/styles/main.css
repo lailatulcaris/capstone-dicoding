@@ -7,11 +7,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #e0fbe2;
+  background-color: #f8f4e1;
 }
 
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Helvetica", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -51,10 +51,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Centers items vertically */
-  background-color: #006769;
+  background-color: #b47552;
   color: white;
   padding-top: 20px;
-  box-shadow: 0 10px 15px rgba(26, 185, 185, 0.2);
+  box-shadow: 0 10px 15px rgba(212, 144, 19, 0.2);
 }
 
 .navbar-brand {
@@ -86,10 +86,10 @@ a {
 
 /* Footer Section */
 .footer {
-  background-color: #006666;
+  background-color: #b47552;
   color: white;
-  box-shadow: 0 0 15px rgba(26, 185, 185, 0.4); /* Mengubah nilai offset y menjadi 0 */
-  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(223, 127, 17, 0.4); /* Mengubah nilai offset y menjadi 0 */
+  margin-top: 0px;
 }
 
 .logo-img {
@@ -113,7 +113,7 @@ a {
 .link-text {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #006666;
+  background-color: #D49E7B;
   color: #fff;
   text-decoration: none;
   border-radius: 25px;
