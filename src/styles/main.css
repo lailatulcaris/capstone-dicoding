@@ -113,7 +113,7 @@ a {
 .link-text {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #D49E7B;
+  background-color: #d49e7b;
   color: #fff;
   text-decoration: none;
   border-radius: 25px;
@@ -181,7 +181,7 @@ a {
 }
 
 .card-title-custom {
-  background-color: #D49E7B;
+  background-color: #d49e7b;
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -193,4 +193,58 @@ a {
   text-decoration: none;
   color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi saat hover */
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+#tour-details,
+#culture-details {
+  background: linear-gradient(to bottom, #d49e7b, #fff, #fff8e1);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tour-header,
+.culture-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tour-images,
+.culture-images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tour-images img,
+.culture-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.tour-description,
+.culture-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.tour-info,
+.culture-info {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  display: inline-block;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, #d49e7b, #6f4e37, #d49e7b) 1;
 }

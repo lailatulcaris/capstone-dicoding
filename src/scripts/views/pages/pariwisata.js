@@ -31,7 +31,7 @@ const Pariwisata = {
       const searchInput = document.getElementById("search-input");
 
       function displayTourismCards(items) {
-        tourismCardsContainer.innerHTML = '';
+        tourismCardsContainer.innerHTML = "";
         if (items.length === 0) {
           tourismCardsContainer.innerHTML = '<p class="text-danger">Tidak ada data yang ditemukan.</p>';
           return;
@@ -48,9 +48,7 @@ const Pariwisata = {
 
       searchInput.addEventListener("input", (event) => {
         const searchTerm = event.target.value.toLowerCase();
-        const filteredItems = tours.filter((tour) =>
-          tour.province.toLowerCase().includes(searchTerm)
-        );
+        const filteredItems = tours.filter((tour) => tour.province.toLowerCase().includes(searchTerm));
         displayTourismCards(filteredItems);
       });
     } catch (error) {
