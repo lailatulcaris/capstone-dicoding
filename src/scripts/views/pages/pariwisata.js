@@ -11,11 +11,11 @@ const Pariwisata = {
     return `
       <div class="container mt-5">
         <div class="section-title">
-          <center><h2>Pariwisata</h2></center>
+          <center><h2>PARIWISATA</h2></center>
         </div>
         <!-- Search feature -->
-        <div class="search-container mt-4">
-          <input type="text" id="search-input" placeholder="Cari provinsi..." class="form-control">
+        <div class="search-container mt-4 d-flex justify-content-center">
+          <input type="text" id="search-input" placeholder="Cari Provinsi atau Judul..." class="form-control">
         </div>
         <div class="row mt-4" id="tourism-cards">
           <!-- Tourism cards will be inserted here by JavaScript -->
@@ -31,7 +31,7 @@ const Pariwisata = {
       const searchInput = document.getElementById("search-input");
 
       function displayTourismCards(items) {
-        tourismCardsContainer.innerHTML = '';
+        tourismCardsContainer.innerHTML = "";
         if (items.length === 0) {
           tourismCardsContainer.innerHTML = '<p class="text-danger">Tidak ada data yang ditemukan.</p>';
           return;
@@ -48,9 +48,12 @@ const Pariwisata = {
 
       searchInput.addEventListener("input", (event) => {
         const searchTerm = event.target.value.toLowerCase();
+
         const filteredItems = tours.filter((tour) =>
-          tour.province.toLowerCase().includes(searchTerm)
+          tour.province.toLowerCase().includes(searchTerm) ||
+          tour.name.toLowerCase().includes(searchTerm)
         );
+
         displayTourismCards(filteredItems);
       });
     } catch (error) {

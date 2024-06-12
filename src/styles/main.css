@@ -7,11 +7,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #e0fbe2;
+  background-color: #f8f4e1;
 }
 
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Helvetica", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -27,16 +27,9 @@ a {
   min-height: 44px;
 }
 
-.link-text {
-  float: center; /* Gunakan float untuk memposisikan ke kanan */
-  /* atau */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-}
-
 .carousel-item img {
   max-width: 400%;
-  max-height: 500px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  max-height: 580px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
   width: auto;
   height: auto;
 }
@@ -46,15 +39,34 @@ a {
   margin: auto; /* Untuk membuat carousel berada di tengah */
 }
 
+.carousel-caption h5,
+.carousel-caption p {
+  text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease forwards;
+  opacity: 0;
+  font-size: 20px; /* Ukuran font yang diperbesar */
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Centers items vertically */
-  background-color: #006769;
+  background-color: #b47552;
   color: white;
   padding-top: 20px;
-  box-shadow: 0 10px 15px rgba(26, 185, 185, 0.2);
+  box-shadow: 0 10px 15px rgba(212, 144, 19, 0.2);
 }
 
 .navbar-brand {
@@ -84,12 +96,40 @@ a {
   font-size: 2em;
 }
 
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center; /* Centers nav items vertically */
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: #bf1722;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+/* search */
+.form-control {
+  width: 50%;
+}
+
 /* Footer Section */
 .footer {
-  background-color: #006666;
+  background-color: #b47552;
   color: white;
-  box-shadow: 0 0 15px rgba(26, 185, 185, 0.4); /* Mengubah nilai offset y menjadi 0 */
-  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(223, 127, 17, 0.4); /* Mengubah nilai offset y menjadi 0 */
+  margin-top: 0px;
 }
 
 .logo-img {
@@ -113,7 +153,7 @@ a {
 .link-text {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #006666;
+  background-color: #d49e7b;
   color: #fff;
   text-decoration: none;
   border-radius: 25px;
@@ -129,13 +169,7 @@ a {
 }
 
 .card {
-  border-radius: 10px; /* Menambahkan lekukan pada sudut card */
-  overflow: hidden; /* Agar gambar atau konten dalam card tidak melewati batas lekukan */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
-}
-
-.card p {
-  text-align: justify;
+  transition: all 150ms ease-in;
 }
 
 .culture-card {
@@ -171,7 +205,7 @@ a {
 .culture-card .card-text {
   font-size: 1rem;
   margin-top: auto; /* Menempatkan "Province" dan "Address" di bagian atas */
-  color: #b63c85; /* Warna teks */
+  color: #666; /* Warna teks */
 }
 
 .card:hover,
@@ -181,7 +215,7 @@ a {
 }
 
 .card-title-custom {
-  background-color: #48b832;
+  background-color: #d49e7b;
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -191,6 +225,63 @@ a {
 
 .card-link {
   text-decoration: none;
-  color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi saat hover */
+  color: black;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+#tour-details,
+#culture-details {
+  background: linear-gradient(to bottom, #d49e7b, #fff, #fff8e1);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tour-header,
+.culture-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tour-images,
+.culture-images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tour-images img,
+.culture-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.tour-description,
+.culture-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.tour-info,
+.culture-info {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  display: inline-block;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, #d49e7b, #6f4e37, #d49e7b) 1;
+}
+
+.section-title {
+  margin-bottom: 30px; /* Jarak dari judul ke kartu */
 }
