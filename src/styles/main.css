@@ -281,3 +281,7 @@ a {
   border-bottom: 5px solid;
   border-image: linear-gradient(to right, #d49e7b, #6f4e37, #d49e7b) 1;
 }
+
+.section-title {
+  margin-bottom: 30px; /* Jarak dari judul ke kartu */
+}
