@@ -16,22 +16,23 @@ const Beranda = {
         <div class="carousel-item active">
           <img src="./hero-3.jpg" class="d-block w-100" alt="Image 1">
           <div class="carousel-caption d-none d-md-block">
-            <h5>SELAMAT DATANG DI TRAVEL IN</h5>
-            <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
+            <p>WELCOME TO TRAVEL IN!</p>
+            <!-- Sambutan -->
           </div>
         </div>
         <div class="carousel-item">
           <img src="./hero-2.jpg" class="d-block w-100" alt="Image 2">
           <div class="carousel-caption d-none d-md-block">
-            <h5>SELAMAT DATANG DI TRAVEL IN</h5>
-            <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
+            <p>EXPERIENCE THE DIVERSITY OF CULTURE AND</p>
+            <p>BEAUTIFUL TOURISM IN INDONESIA</p>
+            <!-- Keanekaragaman budaya dan keindahan pariwisata di Indonesia -->
           </div>
         </div>
         <div class="carousel-item">
           <img src="./hero-1.jpg" class="d-block w-100" alt="Image 3">
           <div class="carousel-caption d-none d-md-block">
-            <h5>SELAMAT DATANG DI TRAVEL IN</h5>
-            <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
+            <p>DISCOVER HIDDEN GEMS ACROSS THE ARCHIPELAGO</p>
+            <!-- menjelajahi tempat-tempat tersembunyi yang menakjubkan di seluruh kepulauan Indonesia -->
           </div>
         </div>
       </div>

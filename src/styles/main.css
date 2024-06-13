@@ -1,5 +1,5 @@
 * {
-  /* border: 1px red solid; */
+  border: 1px red solid;
 }
 
 html,
@@ -26,12 +26,11 @@ a {
   min-width: 44px;
   min-height: 44px;
 }
-
 .carousel-item img {
-  max-width: 400%;
-  max-height: 580px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 580px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  object-fit: cover; /* Memastikan gambar di-crop sesuai ukuran container */
+  object-position: center; /* Memusatkan gambar */
 }
 
 #carouselExampleIndicators {
@@ -39,22 +38,34 @@ a {
   margin: auto; /* Untuk membuat carousel berada di tengah */
 }
 
-.carousel-caption h5,
-.carousel-caption p {
-  text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
-  animation: fadeInDown 1s ease forwards;
-  opacity: 0;
-  font-size: 20px; /* Ukuran font yang diperbesar */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Pastikan teks berada di lapisan terdepan */
+  text-align: center; /* Agar teks berada di tengah */
+  width: 80%;
 }
 
+.carousel-caption p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Menambahkan shadow */
+  animation: fadeInDown 1s ease forwards;
+  opacity: 0;
+  font-size: 3rem; /* Ukuran font yang diperbesar */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  color: #fff; /* Pastikan teks berwarna putih atau sesuai kebutuhan */
+}
+
+/* Menambahkan animasi untuk teks */
 @keyframes fadeInDown {
   from {
-    transform: translateY(-50px);
     opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
