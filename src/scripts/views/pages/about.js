@@ -41,6 +41,11 @@ const About = {
             </div>
         </div>
     </div>
+
+    <div class="custom-container">
+        <img src="logo-tanpa-bg.png" class="sinematik-image" alt="Logo">
+        <p class="sinematik-text">Tim kami memilih proyek "Pesona Budaya Nusantara (Travel in)" karena yakin kekayaan budaya Indonesia dapat meningkatkan pariwisata. Kami bertujuan meningkatkan daya tarik destinasi pariwisata Indonesia serta mempromosikan nilai budaya Indonesia secara global.</p>
+    </div>
     `;
     },
 

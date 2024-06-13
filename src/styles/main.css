@@ -378,3 +378,51 @@ a {
   font-size: 25px; /* Adjust the font size */
   color: white;
 }
+
+/* about bawah */
+.custom-container {
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.sinematik-image {
+  max-width: 400px; /* Mengatur lebar maksimum gambar */
+  margin: 0 auto 20px; /* Mengatur margin bawah gambar */
+  display: block;
+  transition: transform 0.3s;
+}
+
+.sinematik-image:hover {
+  transform: scale(1.1); /* Efek scale saat hover */
+}
+
+.sinematik-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #b47552;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: textFadeIn 3s ease-in-out;
+  max-width: 500px; /* Mengatur lebar maksimum teks */
+  margin: 0 auto; /* Pusatkan teks secara horizontal */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
