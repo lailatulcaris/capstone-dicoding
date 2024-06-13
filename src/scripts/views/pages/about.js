@@ -1,6 +1,11 @@
 const About = {
-  async render() {
-    return `
+    async render() {
+        return `
+      <div class="custom-container">
+        <img src="logo-tanpa-bg.png" class="sinematik-image" alt="Logo">
+        <p class="sinematik-text">Tim kami memilih proyek "Pesona Budaya Nusantara (Travel in)" karena yakin kekayaan budaya Indonesia dapat meningkatkan pariwisata. Kami bertujuan meningkatkan daya tarik destinasi pariwisata Indonesia serta mempromosikan nilai budaya Indonesia secara global.</p>
+    </div>
+    
       <div class="container mt-5">
         <div class="section-title">
             <center><h2>Anggota Kelompok</h2></center>
@@ -42,11 +47,11 @@ const About = {
         </div>
     </div>
     `;
-  },
+    },
 
-  async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-  },
+    async afterRender() {
+        // Fungsi ini akan dipanggil setelah render()
+    },
 };
 
 export default About;
