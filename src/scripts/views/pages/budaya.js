@@ -13,7 +13,7 @@ const Budaya = {
         </div>
         <!-- Search feature -->
         <div  class="search-container mt-4 d-flex justify-content-center">
-          <input type="text" id="search-input" placeholder="Cari Provinsi atau Judul..." class="form-control">
+          <input type="text" id="search-input" placeholder="search province or name..." class="form-control">
         </div>
         <div class="row mt-4" id="culture-cards">
           <!-- Culture cards will be inserted here by JavaScript -->
