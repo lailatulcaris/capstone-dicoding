@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_URL: 'http://54.255.130.64:5000',
+  BASE_URL: 'https://api1.simantappamekasan.com/',
   DEFAULT_LANGUAGE: 'en-us',
   CACHE_NAME: new Date().toISOString(),
   DATABASE_NAME: 'travelin-database',
