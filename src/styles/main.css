@@ -285,3 +285,96 @@ a {
 .section-title {
   margin-bottom: 30px; /* Jarak dari judul ke kartu */
 }
+
+.whatsapp-float {
+  position: fixed;
+  width: 20px; /* Adjust the width */
+  height: 40px; /* Adjust the height */
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
+  font-size: 25px; /* Adjust the font size */
+  color: white;
+}
+
+/* Add this CSS to your stylesheet */
+
+.text-center {
+  text-align: center;
+}
+
+.title-with-border {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 20px auto;
+  padding-bottom: 10px;
+}
+
+.title-with-border::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #d49e7b, #6f4e37, #d49e7b);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.review-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.review-card .card-body {
+  padding: 20px;
+}
+
+.review-card .card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.review-card .card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px; /* Adjust the width */
+  height: 60px; /* Adjust the height */
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
+  font-size: 25px; /* Adjust the font size */
+  color: white;
+}
