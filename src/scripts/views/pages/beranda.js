@@ -53,25 +53,25 @@ const Beranda = {
 
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>BUDAYA</h2></center>
+        <center><h2>CULTURES</h2></center>
       </div>
       <div class="row mt-4" id="culture-cards">
         <!-- Culture cards will be inserted here by JavaScript -->
       </div>
       <div class="text-center mt-3">
-        <a href="#/budaya" class="link-text">Selengkapnya >>></a>
+        <a href="#/budaya" class="link-text">See More Cultures</a>
       </div>
     </div>
 
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>PARIWISATA</h2></center>
+        <center><h2>TOURISM'S</h2></center>
       </div>
       <div class="row mt-4" id="tourism-cards">
         <!-- Tourism cards will be inserted here by JavaScript -->
       </div>
       <div class="text-center mt-3">
-        <a href="#/pariwisata" class="link-text">Selengkapnya >>></a>
+        <a href="#/pariwisata" class="link-text">See More Tourism's</a>
       </div>
     </div>
 

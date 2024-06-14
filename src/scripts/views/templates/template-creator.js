@@ -57,7 +57,7 @@ const createTourDetailTemplate = (data) => `
     <p class="text text-justify"><b>Address:</b> ${data.address}</p>
     <div class="text-center mt-4">
       <button class="btn btn-primary" onclick="window.open('${data.map}', '_blank');">
-        <i class="bi bi-geo-alt-fill"></i> Lokasi
+        <i class="bi bi-geo-alt-fill"></i> Open in Maps
       </button>
     </div>
   </div>

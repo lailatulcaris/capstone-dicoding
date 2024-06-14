@@ -9,11 +9,11 @@ const Budaya = {
     return `
       <div class="container mt-5">
         <div class="section-title">
-          <center><h2>BUDAYA</h2></center>
+          <center><h2>CULTURES</h2></center>
         </div>
         <!-- Search feature -->
         <div  class="search-container mt-4 d-flex justify-content-center">
-          <input type="text" id="search-input" placeholder="search province or name..." class="form-control">
+          <input type="text" id="search-input" placeholder="Search Cultures Name or Province" class="form-control">
         </div>
         <div class="row mt-4 culture-container" id="culture-cards">
           <!-- Culture cards will be inserted here by JavaScript -->
