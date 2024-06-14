@@ -8,7 +8,7 @@ const About = {
     
       <div class="container mt-5">
         <div class="section-title">
-            <center><h2>Anggota Kelompok</h2></center>
+            <center><h2>Our Team</h2></center>
         </div>
         <div class="row">
             <div class="col-md-4 mb-4">

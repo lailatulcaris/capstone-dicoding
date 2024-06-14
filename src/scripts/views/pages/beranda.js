@@ -1,3 +1,6 @@
+import TravelinSource from "../../data/travelin-source";
+import { createCultureItemTemplate, createTourItemTemplate } from "../templates/template-creator";
+
 const Beranda = {
   async render() {
     return `
@@ -13,22 +16,23 @@ const Beranda = {
         <div class="carousel-item active">
           <img src="./hero-3.jpg" class="d-block w-100" alt="Image 1">
           <div class="carousel-caption d-none d-md-block">
-            <h5>SELAMAT DATANG DI TRAVEL IN</h5>
-            <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
+            <p>WELCOME TO TRAVEL IN!</p>
+            <!-- Sambutan -->
           </div>
         </div>
         <div class="carousel-item">
           <img src="./hero-2.jpg" class="d-block w-100" alt="Image 2">
           <div class="carousel-caption d-none d-md-block">
-            <h5>SELAMAT DATANG DI TRAVEL IN</h5>
-            <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
+            <p>EXPERIENCE THE DIVERSITY OF CULTURE AND</p>
+            <p>BEAUTIFUL TOURISM IN INDONESIA</p>
+            <!-- Keanekaragaman budaya dan keindahan pariwisata di Indonesia -->
           </div>
         </div>
         <div class="carousel-item">
           <img src="./hero-1.jpg" class="d-block w-100" alt="Image 3">
           <div class="carousel-caption d-none d-md-block">
-            <h5>SELAMAT DATANG DI TRAVEL IN</h5>
-            <p>MENYUGUHKAN KEBERAGAMAN BUDAYA DAN PARIWISATA INDAH DI INDONESIA</p>
+            <p>DISCOVER HIDDEN GEMS ACROSS THE ARCHIPELAGO</p>
+            <!-- menjelajahi tempat-tempat tersembunyi yang menakjubkan di seluruh kepulauan Indonesia -->
           </div>
         </div>
       </div>
@@ -49,25 +53,25 @@ const Beranda = {
 
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>BUDAYA</h2></center>
+        <center><h2>CULTURES</h2></center>
       </div>
       <div class="row mt-4" id="culture-cards">
         <!-- Culture cards will be inserted here by JavaScript -->
       </div>
       <div class="text-center mt-3">
-        <a href="#/budaya" class="link-text">Selengkapnya >>></a>
+        <a href="#/budaya" class="link-text">See More Cultures</a>
       </div>
     </div>
 
     <div class="container mt-5">
       <div class="section-title">
-        <center><h2>PARIWISATA</h2></center>
+        <center><h2>TOURISM'S</h2></center>
       </div>
       <div class="row mt-4" id="tourism-cards">
         <!-- Tourism cards will be inserted here by JavaScript -->
       </div>
       <div class="text-center mt-3">
-        <a href="#/pariwisata" class="link-text">Selengkapnya >>></a>
+        <a href="#/pariwisata" class="link-text">See More Tourism's</a>
       </div>
     </div>
 
@@ -77,65 +81,70 @@ const Beranda = {
   },
 
   async afterRender() {
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
     try {
-      // Fetch culture data
-      const cultureResponse = await fetch("../data/culture-en.json");
-      if (!cultureResponse.ok) {
-        throw new Error("Network response for culture data was not ok");
-      }
-      const cultureData = await cultureResponse.json();
-
-      // Render culture cards
+      const cultures = await TravelinSource.Cultures();
       const cultureCardsContainer = document.getElementById("culture-cards");
-      cultureData.culture.slice(0, 4).forEach((item) => {
-        const card = document.createElement("div");
-        card.className = "col-lg-3 col-md-6 mb-4";
-        card.innerHTML = `
-          <div class="card h-100">
-            <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jpg" class="card-img-top" alt="${item.name}">
-            <div class="card-body">
-              <h5 class="card-title">${item.name}</h5>
-              <p class="card-text">${item.description}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Province:</strong> ${item.province}</li>
-              <li class="list-group-item"><strong>Address:</strong> ${item.address}</li>
-            </ul>
-          </div>
-        `;
-        cultureCardsContainer.appendChild(card);
-      });
-
-      // Fetch tourism data
-      const tourismResponse = await fetch("../data/tours-en.json");
-      if (!tourismResponse.ok) {
-        throw new Error("Network response for tourism data was not ok");
+      
+      function displayCultureCards(items) {
+        cultureCardsContainer.innerHTML = '';
+        if (items.length === 0) {
+          cultureCardsContainer.innerHTML = '<p class="text-danger">Tidak ada data yang ditemukan.</p>';
+          return;
+        }
+        items.forEach((culture) => {
+          const card = document.createElement("div");
+          card.className = "col-lg-3 col-md-6 mb-4";
+          card.innerHTML = createCultureItemTemplate(culture);
+          cultureCardsContainer.appendChild(card);
+        });
       }
-      const tourismData = await tourismResponse.json();
+      
+      // Mengacak data budaya dan mengambil 4 item pertama
+      const shuffledCultures = shuffleArray(cultures);
+      const previewCultures = shuffledCultures.slice(0, 4);
+      
+      displayCultureCards(previewCultures);
 
-      // Render tourism cards
-      const tourismCardsContainer = document.getElementById("tourism-cards");
-      tourismData.tours.slice(0, 4).forEach((item) => {
-        const card = document.createElement("div");
-        card.className = "col-lg-3 col-md-6 mb-4";
-        card.innerHTML = `
-          <div class="card h-100">
-            <img src="../${item.name.toLowerCase().replace(/ /g, "-")}.jpeg" class="card-img-top" alt="${item.name}">
-            <div class="card-body">
-              <h5 class="card-title">${item.name}</h5>
-              <p class="card-text">${item.description}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Province:</strong> ${item.province}</li>
-              <li class="list-group-item"><strong>Address:</strong> ${item.address}</li>
-            </ul>
-          </div>
-        `;
-        tourismCardsContainer.appendChild(card);
-      });
+      
     } catch (error) {
       console.error("Error fetching or rendering data:", error);
       document.getElementById("culture-cards").innerHTML = '<p class="text-danger">Gagal memuat data. Silakan coba lagi nanti.</p>';
+    }
+
+    try {
+      const tours = await TravelinSource.Tours();
+      const tourismCardsContainer = document.getElementById("tourism-cards");
+
+      function displayTourismCards(items) {
+        tourismCardsContainer.innerHTML = "";
+        if (items.length === 0) {
+          tourismCardsContainer.innerHTML = '<p class="text-danger">Tidak ada data yang ditemukan.</p>';
+          return;
+        }
+        items.forEach((tour) => {
+          const card = document.createElement("div");
+          card.className = "col-lg-3 col-md-6 mb-4";
+          card.innerHTML = createTourItemTemplate(tour);
+          tourismCardsContainer.appendChild(card);
+        });
+      }
+      
+      // Mengacak data pariwisata dan mengambil 4 item pertama
+      const shuffledTours = shuffleArray(tours);
+      const previewTours = shuffledTours.slice(0, 4);
+      
+      displayTourismCards(previewTours);
+    } catch (error) {
+      console.error("Error fetching or rendering data:", error);
       document.getElementById("tourism-cards").innerHTML = '<p class="text-danger">Gagal memuat data. Silakan coba lagi nanti.</p>';
     }
   },

@@ -28,10 +28,10 @@ a {
 }
 
 .carousel-item img {
-  max-width: 400%;
-  max-height: 580px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 580px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  object-fit: cover; /* Memastikan gambar di-crop sesuai ukuran container */
+  object-position: center; /* Memusatkan gambar */
 }
 
 #carouselExampleIndicators {
@@ -39,22 +39,34 @@ a {
   margin: auto; /* Untuk membuat carousel berada di tengah */
 }
 
-.carousel-caption h5,
-.carousel-caption p {
-  text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
-  animation: fadeInDown 1s ease forwards;
-  opacity: 0;
-  font-size: 20px; /* Ukuran font yang diperbesar */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Pastikan teks berada di lapisan terdepan */
+  text-align: center; /* Agar teks berada di tengah */
+  width: 80%;
 }
 
+.carousel-caption p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Menambahkan shadow */
+  animation: fadeInDown 1s ease forwards;
+  opacity: 0;
+  font-size: 3rem; /* Ukuran font yang diperbesar */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  color: #fff; /* Pastikan teks berwarna putih atau sesuai kebutuhan */
+}
+
+/* Menambahkan animasi untuk teks */
 @keyframes fadeInDown {
   from {
-    transform: translateY(-50px);
     opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -198,7 +210,15 @@ a {
   color: #fff;
   text-decoration: none;
   border-radius: 25px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.link-text:hover {
+  text-decoration: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+  background: transparent;
+  backdrop-filter: blur(5px);
 }
 
 /* card */
@@ -210,7 +230,7 @@ a {
 }
 
 .card {
-  transition: all 150ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 .culture-card {
@@ -218,6 +238,10 @@ a {
   padding-bottom: 10%;
   overflow: hidden;
   position: relative;
+}
+
+.culture-container{
+  margin: auto;
 }
 
 .culture-card .card {
@@ -229,8 +253,9 @@ a {
   border-radius: 20px; /* Border radius untuk sudut */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan kartu */
   overflow: hidden;
-  transition: transform 0.3s ease; /* Efek transisi saat kartu bergerak */
+  transition: transform 200ms ease; /* Efek transisi saat kartu bergerak */
 }
+
 .culture-card .card-body {
   display: flex;
   flex-direction: column;
@@ -269,6 +294,27 @@ a {
   color: black;
 }
 
+.card-link:hover,
+.card-link:focus {
+  color: black; /* Warna teks tetap hitam saat hover */
+}
+
+.card-img-container {
+  width: 100%;
+  height: 200px; /* Sesuaikan tinggi gambar */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
 .container {
   width: 90%;
   margin: auto;
@@ -276,10 +322,15 @@ a {
 
 #tour-details,
 #culture-details {
-  background: linear-gradient(to bottom, #d49e7b, #fff, #fff8e1);
-  padding: 2rem;
+  /* background: linear-gradient(to bottom, #d49e7b, #fff, #fff8e1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  
+  box-shadow: 0px 0px 20px -1px rgba(163, 114, 57, 0.59);
+  -webkit-box-shadow: 0px 0px 20px -1px #b47552;
+  -moz-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.59);
 }
 
 .tour-header,
@@ -377,7 +428,7 @@ a {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
 }
 
 .review-card:hover {
@@ -472,7 +523,7 @@ a {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  /* transition: transform 0.3s, box-shadow 0.3s; */
 }
 
 .card:hover {
