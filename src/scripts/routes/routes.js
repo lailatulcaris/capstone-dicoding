@@ -7,12 +7,12 @@ import About from "../views/pages/about";
 
 const routes = {
   '/': Beranda, // default page
-  '/beranda': Beranda,
-  '/budaya': Budaya,
-  '/pariwisata': Pariwisata,
+  '/home': Beranda,
+  '/cultures': Budaya,
+  '/tourism': Pariwisata,
   '/about': About,
-  '/budaya/:id': DetailBudaya,
-  '/pariwisata/:id': DetailPariwisata,
+  '/cultures/:id': DetailBudaya,
+  '/tourism/:id': DetailPariwisata,
 };
 
 export default routes;
