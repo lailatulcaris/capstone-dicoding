@@ -11,11 +11,11 @@ const Pariwisata = {
     return `
       <div class="container mt-5">
         <div class="section-title">
-          <center><h2>PARIWISATA</h2></center>
+          <center><h2>TOURISM'S</h2></center>
         </div>
         <!-- Search feature -->
         <div class="search-container mt-4 d-flex justify-content-center">
-          <input type="text" id="search-input" placeholder="search province or name..." class="form-control">
+          <input type="text" id="search-input" placeholder="Search Tourism Name or Province" class="form-control">
         </div>
         <div class="row mt-4" id="tourism-cards">
           <!-- Tourism cards will be inserted here by JavaScript -->

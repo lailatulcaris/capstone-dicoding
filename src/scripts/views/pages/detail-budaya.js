@@ -5,6 +5,9 @@ import UrlParser from "../../routes/url-parser";
 const DetailBudaya = {
   async render() {
     return `
+      <div class="section-title mt-5">
+        <center><h2>CULTURE DETAIL</h2></center>
+      </div>
       <section class="container my-5" id="culture-details">
         <!-- Culture details will be inserted here by JavaScript -->
       </section><br>
