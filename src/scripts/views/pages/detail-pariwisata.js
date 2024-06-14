@@ -61,7 +61,7 @@ const DetailPariwisata = {
           <div class="card review-card mb-4">
             <div class="card-body">
               <div class="d-flex align-items-center mb-3">
-                <img src="${review.img}" class="rounded-circle mr-3" alt="${review.name}" style="width: 60px; height: 60px;">
+                <img data-src="${review.img}" class="rounded-circle mr-3 lazyload" alt="${review.name}" style="width: 60px; height: 60px;">
                 <div>
                   <h5 class="card-title mb-0">${review.name}</h5>
                   <small class="text-muted">${review.position}</small>

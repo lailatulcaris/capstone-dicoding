@@ -14,14 +14,14 @@ const Beranda = {
       <!-- Carousel items -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./hero-3.jpg" class="d-block w-100" alt="Image 1">
+          <img data-src="./hero-3.jpg" class="d-block w-100 lazyload" alt="Image 1">
           <div class="carousel-caption d-none d-md-block">
             <p>WELCOME TO TRAVEL IN!</p>
             <!-- Sambutan -->
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./hero-2.jpg" class="d-block w-100" alt="Image 2">
+          <img data-src="./hero-2.jpg" class="d-block w-100 lazyload" alt="Image 2">
           <div class="carousel-caption d-none d-md-block">
             <p>EXPERIENCE THE DIVERSITY OF CULTURE AND</p>
             <p>BEAUTIFUL TOURISM IN INDONESIA</p>
@@ -29,7 +29,7 @@ const Beranda = {
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./hero-1.jpg" class="d-block w-100" alt="Image 3">
+          <img data-src="./hero-1.jpg" class="d-block w-100 lazyload" alt="Image 3">
           <div class="carousel-caption d-none d-md-block">
             <p>DISCOVER HIDDEN GEMS ACROSS THE ARCHIPELAGO</p>
             <!-- menjelajahi tempat-tempat tersembunyi yang menakjubkan di seluruh kepulauan Indonesia -->
