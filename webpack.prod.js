@@ -1,5 +1,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -20,4 +22,14 @@ module.exports = merge(common, {
       },
     ],
   },
+  plugins: [  
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+  ],
 });

@@ -53,21 +53,21 @@ module.exports = {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: ({ url }) => url.href.startsWith('http://54.255.130.64:5000/'),
+          urlPattern: ({ url }) => url.href.startsWith('https://api1.simantappamekasan.com/'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'travelin-api',
           },
         },
         {
-          urlPattern: ({ url }) => url.href.startsWith('http://54.255.130.64:5000/cultures/image'),
+          urlPattern: ({ url }) => url.href.startsWith('https://api1.simantappamekasan.com/cultures/image'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'travelin-api-image1',
           },
         },
         {
-          urlPattern: ({ url }) => url.href.startsWith('http://54.255.130.64:5000/tours/image'),
+          urlPattern: ({ url }) => url.href.startsWith('https://api1.simantappamekasan.com/tours/image'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'travelin-api-image2',
