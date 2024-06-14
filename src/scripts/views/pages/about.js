@@ -3,7 +3,12 @@ const About = {
         return `
       <div class="custom-container">
         <img src="logo-tanpa-bg.png" class="sinematik-image" alt="Logo">
-        <p class="sinematik-text">Tim kami memilih proyek "Pesona Budaya Nusantara (Travel in)" karena yakin kekayaan budaya Indonesia dapat meningkatkan pariwisata. Kami bertujuan meningkatkan daya tarik destinasi pariwisata Indonesia serta mempromosikan nilai budaya Indonesia secara global.</p>
+        <p class="sinematik-text">Travel in is a web-based application designed to provide in-depth and
+         comprehensive information about Culture and Tourism in Indonesia. This application aims to make
+          it easier for foreign tourists to plan their trips to Indonesia by providing easy and complete 
+          access to various information related to culture, traditions and the most popular tourist destinations
+           in several provinces throughout the archipelago.
+        </p>
     </div>
     
       <div class="container mt-5">
