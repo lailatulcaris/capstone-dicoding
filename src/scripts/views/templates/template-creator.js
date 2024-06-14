@@ -8,9 +8,8 @@ const createCultureItemTemplate = (data) => `
         <div class="card-title card-title-custom">
           <h5 class="m-0">${data.name}</h5>
         </div>
-        <!-- <p class="card-text">${data.description}</p> -->
-        <p><strong>Province:</strong> ${data.province}</p>
-        <p><strong>Address:</strong> ${data.address}</p>
+        <p><strong>Province:</strong><br>${data.province}</p>
+        <p><strong>Address:</strong><br>${data.address}</p>
       </div>
     </div>
   </a>
@@ -39,9 +38,8 @@ const createTourItemTemplate = (data) => `
       <div class="card-title card-title-custom">
         <h5 class="m-0">${data.name}</h5>
       </div>
-      <!-- <p class="card-text">${data.description}</p> -->
-      <p><strong>Province:</strong> ${data.province}</p>
-      <p><strong>Address:</strong> ${data.address}</p>
+      <p><strong>Province:</strong><br>${data.province}</p>
+      <p><strong>Address:</strong><br>${data.address}</p>
     </div>
   </div>
 </a>
