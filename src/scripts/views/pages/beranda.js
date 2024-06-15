@@ -14,14 +14,23 @@ const Beranda = {
       <!-- Carousel items -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img data-src="./hero-3.jpg" class="d-block w-100 lazyload" alt="Image 1">
+          <picture>
+            <source type="image/webp" srcset="./hero-3.webp" class="d-block w-100 lazyload">
+            <source type="image/jpeg" srcset="./hero-3.jpg" class="d-block w-100 lazyload">
+            <img data-src="./hero-3.jpg" class="d-block w-100 lazyload" alt="Image 1">
+          </picture>
           <div class="carousel-caption d-none d-md-block">
             <p>WELCOME TO TRAVEL IN!</p>
             <!-- Sambutan -->
           </div>
         </div>
         <div class="carousel-item">
-          <img data-src="./hero-2.jpg" class="d-block w-100 lazyload" alt="Image 2">
+          <picture>
+            <source type="image/webp" srcset="./hero-2.webp" class="d-block w-100 lazyload">
+            <source type="image/jpeg" srcset="./hero-2.jpg" class="d-block w-100 lazyload">
+            <img data-src="./hero-2.jpg" class="d-block w-100 lazyload" alt="Image 2">
+          </picture>
+          
           <div class="carousel-caption d-none d-md-block">
             <p>EXPERIENCE THE DIVERSITY OF CULTURE AND</p>
             <p>BEAUTIFUL TOURISM IN INDONESIA</p>
@@ -29,7 +38,12 @@ const Beranda = {
           </div>
         </div>
         <div class="carousel-item">
-          <img data-src="./hero-1.jpg" class="d-block w-100 lazyload" alt="Image 3">
+          <picture>
+            <source type="image/webp" srcset="./hero-1.webp" class="d-block w-100 lazyload">
+            <source type="image/jpeg" srcset="./hero-1.jpg" class="d-block w-100 lazyload">
+            <img data-src="./hero-1.jpg" class="d-block w-100 lazyload" alt="Image 3">
+          </picture>
+          
           <div class="carousel-caption d-none d-md-block">
             <p>DISCOVER HIDDEN GEMS ACROSS THE ARCHIPELAGO</p>
             <!-- menjelajahi tempat-tempat tersembunyi yang menakjubkan di seluruh kepulauan Indonesia -->

@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -60,6 +61,17 @@ module.exports = merge(common, {
           progressive: true,
         }),
       ],
+    }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 50,
+          },
+        },
+      ],
+      overrideExtension: true,
     }),
     new BundleAnalyzerPlugin(),
   ],
