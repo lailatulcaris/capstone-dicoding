@@ -17,9 +17,10 @@ const DetailBudaya = {
           <!-- Reviews will be inserted here by JavaScript -->
         </div>
       </section><br>
-      <a href="https://wa.me/088901488574" class="whatsapp-float" target="_blank">
-        <i class="bi bi-whatsapp whatsapp-icon"></i>
-      </a>
+  <a href="https://wa.me/6288901488574" class="whatsapp-float" target="_blank">
+    <i class="bi bi-whatsapp whatsapp-icon"></i>
+</a>
+
     `;
   },
 
