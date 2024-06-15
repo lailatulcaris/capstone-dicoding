@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#006769" />
+    <meta name="description" content="TravelIn">
 
     <title>Travel in</title>
 
@@ -19,52 +20,14 @@
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
   </head>
   <body>
-    <!-- Navigation Bar -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <div class="navbar-brand">
-            <!-- Logo -->
-            <img src="./logo-tanpa-bg.png" alt="Logo" class="logo-img" />
-            <!-- Nama aplikasi-->
-            <a class="nav-link text-white" href="#/"><h1 class="h3 text-white">Travel in</h1></a>
-            
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#/home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#/cultures">Cultures</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#/tourism">Tourism's</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#/about">About Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <app-nav> </app-nav>
     </header>
 
     <main id="main-content"></main>
 
-    <footer class="footer bg-teal py-3">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div class="text-center d-flex align-items-center">
-          <img src="./logo-tanpa-bg.png" alt="Logo" class="logo-img mr-2" />
-          <p class="mb-0">&copy; 2024, Travel in.</p>
-        </div>
-        <div class="links">
-          <a href="https://github.com/lailatulcaris/capstone-dicoding" target="_blank"><i class="bi bi-github github-icon"></i></a>
-        </div>
-      </div>
+    <footer class="footer py-3">
+      <app-footer></app-footer>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
