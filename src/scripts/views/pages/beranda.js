@@ -73,7 +73,7 @@ const Beranda = {
         <!-- Culture cards will be inserted here by JavaScript -->
       </div>
       <div class="text-center mt-3">
-        <a href="#/budaya" class="link-text">See More Cultures</a>
+        <a href="#/cultures" class="link-text">See More Cultures</a>
       </div>
     </div>
 
@@ -85,7 +85,7 @@ const Beranda = {
         <!-- Tourism cards will be inserted here by JavaScript -->
       </div>
       <div class="text-center mt-3">
-        <a href="#/pariwisata" class="link-text">See More Tourism's</a>
+        <a href="#/tourism" class="link-text">See More Tourism's</a>
       </div>
     </div>
 

@@ -73,6 +73,6 @@ module.exports = merge(common, {
       ],
       overrideExtension: true,
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
 });
