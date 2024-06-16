@@ -30,7 +30,7 @@ https://api1.simantappamekasan.com/
 
 ## Persyaratan
 
-- **Node.js**: Versi 20.11.1.
+- **Node.js**: Versi 20.11.1 atau versi diatasnya.
 - **NPM**: Terinstall bersama Node.js.
 - **Browser**: Chrome, Firefox, Safari, atau Edge untuk pengalaman terbaik.
 
