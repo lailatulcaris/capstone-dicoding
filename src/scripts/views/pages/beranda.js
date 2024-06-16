@@ -1,5 +1,5 @@
 import TravelinSource from "../../data/travelin-source";
-import { createCultureItemTemplate, createTourItemTemplate } from "../templates/template-creator";
+import { createCultureHomeItemTemplate, createTourHomeItemTemplate } from "../templates/template-creator";
 
 const Beranda = {
   async render() {
@@ -117,7 +117,7 @@ const Beranda = {
         items.forEach((culture) => {
           const card = document.createElement("div");
           card.className = "col-lg-3 col-md-6 mb-4";
-          card.innerHTML = createCultureItemTemplate(culture);
+          card.innerHTML = createCultureHomeItemTemplate(culture);
           cultureCardsContainer.appendChild(card);
         });
       }
@@ -146,7 +146,7 @@ const Beranda = {
         items.forEach((tour) => {
           const card = document.createElement("div");
           card.className = "col-lg-3 col-md-6 mb-4";
-          card.innerHTML = createTourItemTemplate(tour);
+          card.innerHTML = createTourHomeItemTemplate(tour);
           tourismCardsContainer.appendChild(card);
         });
       }
@@ -167,14 +167,14 @@ const Beranda = {
     for (let i = 0; i < count; i++) {
       skeletonHTML += `
       <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <div class="card-header skeleton"></div>
-          <div class="card-body">
-            <div class="skeleton skeleton-text"></div>
-            <div class="skeleton skeleton-text"></div>
-            <div class="skeleton skeleton-text skeleton-text__body"></div>
+        <div class="card h-100">
+          <div class="card-img-top skeleton skeleton-img" style="height: 200px;"></div>
+          <div class="card-body d-flex flex-column">
+            <div class="skeleton skeleton-text" style="width: 70%; height: 20px; margin-bottom: 10px;"></div>
+            <div class="skeleton skeleton-text" style="width: 50%; height: 15px; margin-bottom: 10px;"></div>
+            <div class="skeleton skeleton-text" style="width: 100%; height: 15px; margin-bottom: 10px;"></div>
+            <div class="skeleton skeleton-text" style="width: 100%; height: 15px;"></div>
           </div>
-          <div class="card-footer skeleton skeleton-footer"></div>
         </div>
       </div>
       `;
