@@ -8,7 +8,6 @@
 * [Instalasi](#instalasi)
 * [Cara Penggunaan](#cara-penggunaan)
 * [Cara Berkontribusi](#cara-berkontribusi)
-* [Lisensi](#lisensi)
 
 ## Deskripsi
 Kami memilih proyek "Pesona Budaya Nusantara (Travel in)" karena yakin kekayaan budaya Indonesia dapat meningkatkan pariwisata. Kami bertujuan meningkatkan daya tarik destinasi pariwisata Indonesia serta mempromosikan nilai budaya Indonesia secara global.
@@ -76,9 +75,5 @@ Kami sangat menghargai kontribusi dari para pengembang. Untuk berkontribusi pada
 4. Commit perubahan Anda (`git commit -am 'Menambah fitur baru'`).
 5. Push ke branch Anda (`git push origin fitur-baru`).
 6. Buat pull request baru.
-
-## Lisensi
-
-Proyek ini dilisensikan di bawah lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
 
 
