@@ -28,7 +28,7 @@ const Budaya = {
       function displayCultureCards(items) {
         cultureCardsContainer.innerHTML = '';
         if (items.length === 0) {
-          cultureCardsContainer.innerHTML = '<p class="text-danger">Tidak ada data yang ditemukan.</p>';
+          cultureCardsContainer.innerHTML = '<p class="text-danger">No data found.</p>';
           return;
         }
         items.forEach((culture) => {
