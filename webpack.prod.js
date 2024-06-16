@@ -54,25 +54,25 @@ module.exports = merge(common, {
     },
   },
   plugins: [  
-    new ImageminWebpackPlugin({
-      plugins: [
-        ImageminMozjpeg({
-          quality: 50,
-          progressive: true,
-        }),
-      ],
-    }),
-    new ImageminWebpWebpackPlugin({
-      config: [
-        {
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality: 50,
-          },
-        },
-      ],
-      overrideExtension: true,
-    }),
+    // new ImageminWebpackPlugin({
+    //   plugins: [
+    //     ImageminMozjpeg({
+    //       quality: 50,
+    //       progressive: true,
+    //     }),
+    //   ],
+    // }),
+    // new ImageminWebpWebpackPlugin({
+    //   config: [
+    //     {
+    //       test: /\.(jpe?g|png)/,
+    //       options: {
+    //         quality: 50,
+    //       },
+    //     },
+    //   ],
+    //   overrideExtension: true,
+    // }),
     // new BundleAnalyzerPlugin(),
   ],
 });

@@ -1,8 +1,5 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable quotes */
-/* eslint-disable linebreak-style */
 import TravelinSource from "../../data/travelin-source";
-import { createCultureItemTemplate } from "../templates/template-creator";
+import { createCultureItemTemplate, createCultureSkeletonTemplate } from "../templates/template-creator";
 
 const Budaya = {
   async render() {
@@ -16,7 +13,7 @@ const Budaya = {
           <input type="text" id="search-input" placeholder="Search Cultures Name or Province" class="form-control">
         </div>
         <div class="row mt-4 culture-container" id="culture-cards">
-          <!-- Culture cards will be inserted here by JavaScript -->
+          ${createCultureSkeletonTemplate(8)} <!-- Skeleton loader -->
         </div>
       </div>
     `;
@@ -31,7 +28,7 @@ const Budaya = {
       function displayCultureCards(items) {
         cultureCardsContainer.innerHTML = '';
         if (items.length === 0) {
-          cultureCardsContainer.innerHTML = '<p class="text-danger">Tidak ada data yang ditemukan.</p>';
+          cultureCardsContainer.innerHTML = '<p class="text-danger">No data found.</p>';
           return;
         }
         items.forEach((culture) => {

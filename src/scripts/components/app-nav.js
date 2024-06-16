@@ -9,11 +9,7 @@ class AppNav extends HTMLElement {
         <div class="container-fluid">
           <div class="navbar-brand">
             <!-- Logo -->
-            <picture>
-              <source type="image/webp" srcset="./logo-tanpa-bg.webp" class="logo-img lazyload">
-              <source type="image/jpeg" srcset="./logo-tanpa-bg.jpg" class="logo-img lazyload">
               <img data-src="./logo-tanpa-bg.png" alt="Logo" class="logo-img lazyload"/>
-            </picture>
             <!-- Nama aplikasi-->
             <a class="nav-link text-white" href="#/"><h1 class="h3 text-white">Travel in</h1></a>
             

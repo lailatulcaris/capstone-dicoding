@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -277,8 +283,8 @@ a {
 }
 
 .card-title-custom {
-  background-color: #d49e7b;
-  color: white;
+  background-color: #ddbba5;
+  color: rgb(0, 0, 0);
   padding: 0.5rem;
   margin-bottom: 1rem;
   border-radius: 5px; /* Menjadikan semua sudut menjadi melengkung */
@@ -488,8 +494,8 @@ a {
 .sinematik-text {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #b47552;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #000000;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   animation: textFadeIn 3s ease-in-out;
   max-width: 500px; /* Mengatur lebar maksimum teks */
   margin: 0 auto; /* Pusatkan teks secara horizontal */

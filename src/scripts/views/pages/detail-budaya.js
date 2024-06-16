@@ -1,5 +1,5 @@
 import TravelinSource from "../../data/travelin-source";
-import { createCultureDetailTemplate } from "../templates/template-creator";
+import { createCultureDetailTemplate, createCultureDetailSkeletonTemplate, createReviewSkeletonTemplate } from "../templates/template-creator";
 import UrlParser from "../../routes/url-parser";
 
 const DetailBudaya = {
@@ -9,18 +9,17 @@ const DetailBudaya = {
         <center><h2>CULTURE DETAIL</h2></center>
       </div>
       <section class="container my-5" id="culture-details">
-        <!-- Culture details will be inserted here by JavaScript -->
+        ${createCultureDetailSkeletonTemplate()} <!-- Skeleton loader -->
       </section><br>
       <section class="container my-5" id="culture-reviews">
         <h2 class="mb-4 text-center title-with-border">Visitor Reviews</h2>
         <div id="reviews-container" class="row">
-          <!-- Reviews will be inserted here by JavaScript -->
+          ${createReviewSkeletonTemplate(3)} <!-- Skeleton loader untuk review -->
         </div>
       </section><br>
-  <a href="https://wa.me/6288901488574" class="whatsapp-float" target="_blank">
-    <i class="bi bi-whatsapp whatsapp-icon"></i>
-</a>
-
+      <a href="https://wa.me/6288901488574" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp whatsapp-icon"></i>
+      </a>
     `;
   },
 
