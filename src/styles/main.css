@@ -277,8 +277,8 @@ a {
 }
 
 .card-title-custom {
-  background-color: #d49e7b;
-  color: white;
+  background-color: #ddbba5;
+  color: rgb(0, 0, 0);
   padding: 0.5rem;
   margin-bottom: 1rem;
   border-radius: 5px; /* Menjadikan semua sudut menjadi melengkung */

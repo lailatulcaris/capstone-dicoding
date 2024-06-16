@@ -1,7 +1,6 @@
-/* Responsive styles */
 .carousel-image {
   object-fit: cover;
-  height: 60vh; /* Adjust height as needed */
+  height: 60vh; 
 }
 
 @media (max-width: 992px) {
@@ -12,6 +11,38 @@
 
   .carousel-caption p {
     margin: 0;
+  }
+
+  .review-card {
+    margin-bottom: 1rem;
+  }
+
+  .review-card .card-body {
+    text-align: center;
+  }
+
+  .review-card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .review-card .card-text {
+    font-size: 0.9rem;
+  }
+
+  .review-card img {
+    margin-bottom: 1rem;
+  }
+
+  #reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #reviews-container .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
   }
 }
 
@@ -43,6 +74,18 @@
 
   .link-text {
     font-size: 1rem;
+  }
+
+  .review-card .card-body {
+    padding: 1rem;
+  }
+
+  .review-card .card-title {
+    font-size: 1rem;
+  }
+
+  .review-card .card-text {
+    font-size: 0.8rem;
   }
 }
 
@@ -91,6 +134,19 @@
   }
   
   .sinematik-image {
-    max-width: 300px; /* Mengatur lebar maksimum gambar */
+    max-width: 300px;
+  }
+
+  .review-card .card-title {
+    font-size: 0.9rem;
+  }
+
+  .review-card .card-text {
+    font-size: 0.7rem;
+  }
+
+  .review-card img {
+    width: 50px;
+    height: 50px;
   }
 }
