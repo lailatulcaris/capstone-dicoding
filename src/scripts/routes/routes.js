@@ -6,7 +6,7 @@ import DetailPariwisata from "../views/pages/detail-pariwisata";
 import About from "../views/pages/about";
 
 const routes = {
-  '/': Beranda, // default page
+  '/': Beranda,
   '/home': Beranda,
   '/cultures': Budaya,
   '/tourism': Pariwisata,

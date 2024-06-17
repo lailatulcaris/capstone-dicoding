@@ -21,6 +21,7 @@ body {
 /* Wrapper untuk konten utama */
 main {
   flex: 1;
+  margin-top: 80px;
 }
 
 a {
@@ -77,10 +78,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Centers items vertically */
-  background-color: #b47552;
-  color: white;
+  background-color: rgba(139, 75, 40, 0.651);
   padding-top: 20px;
   box-shadow: 0 10px 15px rgba(212, 144, 19, 0.2);
+  color: #000000;
 }
 
 .navbar-brand {
@@ -90,7 +91,7 @@ a {
 
 .navbar-nav .nav-item .nav-link {
   position: relative;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   padding-bottom: 5px;
   transition: all 0.3s;

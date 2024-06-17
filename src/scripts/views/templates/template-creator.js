@@ -146,6 +146,7 @@ const createTourSkeletonTemplate = (count) => {
   return skeletonHTML;
 };
 
+
 const createTourDetailSkeletonTemplate = () => `
   <div class="row">
     <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
