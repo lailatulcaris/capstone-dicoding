@@ -17,9 +17,14 @@ Anggota : <br>
 (F3586XB205) – (Lailatul Carisma Putri) - Front-End Developer.<br>
 (F7136YB351) – (Muhammad Syarif Yahya S.H) - Back-End Developer.<br>
 
+### DEPLOY URL
+```
+https://travelin-dicoding.vercel.app
+```
+
 ### API URL
 ```
-https://api1.simantappamekasan.com/
+https://api1.simantappamekasan.com
 ```
 
 ### API DOCUMENTATION
